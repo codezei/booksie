@@ -1,0 +1,16 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "House Guide";
+
+append head
+
+append content
+  include components/header
+  include components/houses/house-guide
+
+
+append scripts

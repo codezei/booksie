@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All Houses</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg fw-medium"><a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item mx-xxl-4"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./read.html">Read</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./all-houses.html">Houses</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./contest.html">Contests</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./shop.html">Shop</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./bookstore.html">Bookstore</a></li>
+          </ul>
+          <ul class="navbar-nav me-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.58333 18.1251C4.875 18.1251 1.04167 14.2917 1.04167 9.58341C1.04167 4.87508 4.875 1.04175 9.58333 1.04175C14.2917 1.04175 18.125 4.87508 18.125 9.58341C18.125 14.2917 14.2917 18.1251 9.58333 18.1251ZM9.58333 2.29175C5.55833 2.29175 2.29167 5.56675 2.29167 9.58341C2.29167 13.6001 5.55833 16.8751 9.58333 16.8751C13.6083 16.8751 16.875 13.6001 16.875 9.58341C16.875 5.56675 13.6083 2.29175 9.58333 2.29175Z" fill="black"></path>
+                  <path d="M18.3333 18.9583C18.175 18.9583 18.0167 18.9 17.8917 18.775L16.225 17.1083C15.9833 16.8666 15.9833 16.4666 16.225 16.225C16.4667 15.9833 16.8667 15.9833 17.1083 16.225L18.775 17.8916C19.0167 18.1333 19.0167 18.5333 18.775 18.775C18.65 18.9 18.4917 18.9583 18.3333 18.9583Z" fill="black"></path>
+                </svg></a>
+            <li class="nav-item"><a class="nav-link text-decoration-underline" href="#">Login</a></li>
+            </li>
+          </ul><a class="btn btn-primary me-3" href="#">Join</a><a class="btn btn-dark" href="#">Post Your Writing</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="modal fade" id="create-house-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h4 class="modal-title">Premium Feature</h4><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>You must be a premium member to create a publishing house.</div>
+        </div>
+        <div class="modal-footer border-0"><button class="btn btn-orange w-100" type="button">Upgrade to Premium Membership<i class="icon icon-stop ms-1"></i></button><button class="btn btn-outline-primary w-100" type="button">Learm about Pemium Membership</button></div>
+      </div>
+    </div>
+  </div>
+  <section class="mb-6 mb-lg-9">
+    <div class="container">
+      <nav class="mb-4 mb-lg-6" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Houses</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center justify-content-center mb-4 md-lg-6 g-3">
+        <div class="col-12 col-md-6">
+          <h2 class="text-center mb-0 text-md-start">All Publishing Houses</h2>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-end"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-house-modal"><svg class="bi bi-plus-lg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"></path>
+            </svg>Create House</button></div>
+      </div>
+      <div class="row g-2 justify-content-between mb-2 mb-sm-4 mb-lg-6">
+        <div class="col-12 col-sm-6 col-md-5">
+          <form method="GET">
+            <div class="input-group"><input class="form-control" type="text" placeholder="Find a Publishing House" name="search"><span class="input-group-text"><svg class="bi bi-search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path></svg></span></div>
+          </form>
+        </div>
+        <div class="col-12 col-sm-6 col-md-5">
+          <form method="GET"><select class="form-select" aria-label="Order by" name="ordered">
+              <option selected>Order by</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select></form>
+        </div>
+      </div>
+      <div class="row g-2 mb-2 mb-sm-4 mb-lg-6">
+        <div class="col col-6 col-lg-auto"> <a class="btn btn-outline-primary w-100" href="my-houses.html">My Houses</a></div>
+        <div class="col col-6 col-lg-auto"> <a class="btn btn-outline-primary w-100 active" href="all-houses.html">All Houses</a></div>
+        <div class="col col-6 col-lg-auto"> <a class="btn btn-outline-primary w-100" href="create-house.html">Create House</a></div>
+        <div class="col col-6 col-lg-auto"> <a class="btn btn-outline-primary w-100" href="house-guide.html">House Guide</a></div>
+      </div>
+      <div class="row gy-3">
+        <div class="col-12 col-md-3 col-xl-3 col-xxl-2"><button class="btn btn-dark w-100 mb-3 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-category-form" aria-expanded="false" aria-controls="collapseExample">Filter</button>
+          <div class="collapse d-md-block" id="collapse-category-form">
+            <div class="small">All categories</div><a class="text-danger small" href>Clear all</a>
+            <hr>
+            <form method="GET">
+              <div class="form-check"><input class="form-check-input" id="category-check-0" type="checkbox" value="all" checked><label class="form-check-label text-secondary small" for="category-check-0">All Categories</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-1" type="checkbox" value="science-fiction"><label class="form-check-label text-secondary small" for="category-check-1">Science Fiction</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-2" type="checkbox" value="fantasy"><label class="form-check-label text-secondary small" for="category-check-2">Fantasy</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-3" type="checkbox" value="romance"><label class="form-check-label text-secondary small" for="category-check-3">Romance</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-4" type="checkbox" value="religious"><label class="form-check-label text-secondary small" for="category-check-4">Religious</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-5" type="checkbox" value="personal"><label class="form-check-label text-secondary small" for="category-check-5">Personal</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-6" type="checkbox" value="collaboration"><label class="form-check-label text-secondary small" for="category-check-6">Collaboration</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-7" type="checkbox" value="writing-critique-groups"><label class="form-check-label text-secondary small" for="category-check-7">Writing Critique Groups</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-8" type="checkbox" value="women"><label class="form-check-label text-secondary small" for="category-check-8">Women</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-9" type="checkbox" value="poetry"><label class="form-check-label text-secondary small" for="category-check-9">Poetry</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-10" type="checkbox" value="fan-fiction"><label class="form-check-label text-secondary small" for="category-check-10">Fan Fiction</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-11" type="checkbox" value="politics"><label class="form-check-label text-secondary small" for="category-check-11">Politics</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-12" type="checkbox" value="vampire-and-werewolf"><label class="form-check-label text-secondary small" for="category-check-12">Vampire and Werewolf</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-13" type="checkbox" value="horror"><label class="form-check-label text-secondary small" for="category-check-13">Horror</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-14" type="checkbox" value="other"><label class="form-check-label text-secondary small" for="category-check-14">Other</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-15" type="checkbox" value="publishing"><label class="form-check-label text-secondary small" for="category-check-15">Publishing</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-16" type="checkbox" value="anime"><label class="form-check-label text-secondary small" for="category-check-16">Anime</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-17" type="checkbox" value="humor"><label class="form-check-label text-secondary small" for="category-check-17">Humor</label></div>
+              <div class="form-check"><input class="form-check-input" id="category-check-18" type="checkbox" value="education"><label class="form-check-label text-secondary small" for="category-check-18">Education</label></div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-md-9 col-xl-9 col-xxl-10">
+          <div class="row g-3">
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Braided Wigs: Trends in Length and Style</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-1.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Religious</a></div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Booksie Limited Editions</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-2.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Lashley</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-3.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>1</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-4.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-5.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Lashley</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-3.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>1</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-4.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-5.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-5.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Lashley</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-3.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>1</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-4.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+              <div class="card border-0 h-100">
+                <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 320px">
+                  <h6 class="text-center card-title w-100">Real People</h6>
+                  <div class="position-relative flex-fill"><img class="card-img position-absolute w-auto translate-middle top-50 start-50" src="img/houses-img-5.jpg" alt=""></div>
+                </div>
+                <div class="card-body px-0">
+                  <div class="row g-1 justify-content-between mb-3 small">
+                    <div class="col-6 small">Members:8</div>
+                    <div class="col-6 small">Language: English</div>
+                    <div class="col-6 small">Category: <a class="text-decoration-none" href>Personal</a></div>
+                    <div class="col-6 small">Bronze House:<i class="icon icon-house mx-1"></i>3</div>
+                  </div>
+                  <p class="text-secondary small card-text">Public access to join. (you don't need moderator permission to join)</p>
+                </div>
+                <div class="card-footer p-0 border-0"><a class="card-link" href="#">Read More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="mt-5 mt-lg-6 d-flex justify-content-center">
+        <ul class="pagination mb-0">
+          <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="py-6 py-9 bg-light">
+    <div class="container">
+      <h2 class="mb-5 mb-lg-7 text-center">Discover New Books</h2>
+      <div class="swiper new-books-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-1.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Monarch</h4>
+                <p class="card-text text-secondary text-uppercase small">by Cobber</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-2.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Where Dragons Rule: Dissent (Old Ver)</h4>
+                <p class="card-text text-secondary text-uppercase small">by Sonny Dae</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-3.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Choose Your Seaside Adventure</h4>
+                <p class="card-text text-secondary text-uppercase small">by toadstoolwoods</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-4.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Divine Diamond Highway</h4>
+                <p class="card-text text-secondary text-uppercase small">by Thomas LaHomme</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-4.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Rockstar - Beginnings</h4>
+                <p class="card-text text-secondary text-uppercase small">by RoyBoy</p>
+              </div>
+            </a></div>
+        </div>
+      </div>
+      <div class="swiper-navigation text-center mt-5">
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-prev new-books-button-prev"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-next new-books-button-next"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+      </div>
+      <div class="text-center mt-5"><a class="btn btn-outline-primary" href="#">Read More eBooks</a></div>
+    </div>
+  </section>
+  <section class="py-6 py-9">
+    <div class="container">
+      <h2 class="mb-5 mb-lg-7 text-center">Boosted Content from Other Authors</h2>
+      <div class="swiper boosted-other-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-1.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Monarch</h4>
+                <p class="card-text text-secondary text-uppercase small">by Cobber</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-2.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Where Dragons Rule: Dissent (Old Ver)</h4>
+                <p class="card-text text-secondary text-uppercase small">by Sonny Dae</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-3.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Choose Your Seaside Adventure</h4>
+                <p class="card-text text-secondary text-uppercase small">by toadstoolwoods</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-4.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Divine Diamond Highway</h4>
+                <p class="card-text text-secondary text-uppercase small">by Thomas LaHomme</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-5.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Rockstar - Beginnings</h4>
+                <p class="card-text text-secondary text-uppercase small">by RoyBoy</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-6.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Rockstar - Beginnings</h4>
+                <p class="card-text text-secondary text-uppercase small">by RoyBoy</p>
+              </div>
+            </a></div>
+        </div>
+      </div>
+      <div class="swiper-navigation text-center mt-5">
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-prev boosted-other-button-prev"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-next boosted-other-button-next"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-6 py-9">
+    <div class="container">
+      <h2 class="mb-5 mb-lg-7 text-center">Boosted Content from Premium Members</h2>
+      <div class="swiper boosted-premium-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-1.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Monarch</h4>
+                <p class="card-text text-secondary text-uppercase small">by Cobber</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-2.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Where Dragons Rule: Dissent (Old Ver)</h4>
+                <p class="card-text text-secondary text-uppercase small">by Sonny Dae</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-3.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Choose Your Seaside Adventure</h4>
+                <p class="card-text text-secondary text-uppercase small">by toadstoolwoods</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-4.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Divine Diamond Highway</h4>
+                <p class="card-text text-secondary text-uppercase small">by Thomas LaHomme</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-5.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Rockstar - Beginnings</h4>
+                <p class="card-text text-secondary text-uppercase small">by RoyBoy</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0" href="#">
+              <div class="p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-light" style="height: 350px;"><img class="card-img w-auto" src="img/boosted-content-img-6.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Rockstar - Beginnings</h4>
+                <p class="card-text text-secondary text-uppercase small">by RoyBoy</p>
+              </div>
+            </a></div>
+        </div>
+      </div>
+      <div class="swiper-navigation text-center mt-5">
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-prev boosted-premium-button-prev"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-next boosted-premium-button-next"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white py-6 py-lg-9">
+    <div class="container">
+      <div class="row g-3 justify-content-xl-between">
+        <div class="col-12 col-md-6 col-lg-3">
+          <p class="text-center text-md-start mb-5 mb-lg-6"><a class="navbar-brand" href="./index.html"><img src="img/logo-footer.svg" alt=""></a></p>
+          <p class="text-center text-md-start">BOOKSIE © 2024 | All rights reserved. Terms under which this service is provided to you. Privacy Policy.</p>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Read Houses</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Members</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Tags</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Writing Resources</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Top 100 Love Poems</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Help Guide</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Publishing Advisor</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3">
+          <div class="row g-3">
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_440_1615)"></g>
+                    <path d="M19.9974 13.3334V28L13.3307 24L6.66406 28V13.3334C6.66406 12.2725 7.08549 11.2551 7.83564 10.5049C8.58578 9.7548 9.6032 9.33337 10.6641 9.33337H15.9974C17.0583 9.33337 18.0757 9.7548 18.8258 10.5049C19.576 11.2551 19.9974 12.2725 19.9974 13.3334Z" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.6641 4H21.3307C22.3916 4 23.409 4.42143 24.1592 5.17157C24.9093 5.92172 25.3307 6.93913 25.3307 8V22.6667" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <defs>
+                      <clippath id="clip0_440_1615"></clippath>
+                      <rect width="32" height="32" fill="white"></rect>
+                    </defs>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Booksie Limited Editions</p>
+                </div>
+              </a></div>
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8.05601C13.8021 6.08449 10.9525 4.99594 8 5.00001C6.59733 5.00001 5.25067 5.24001 4 5.68268V24.6827C5.28483 24.2294 6.63755 23.9985 8 24C11.0733 24 13.8773 25.156 16 27.056M16 8.05601C18.1978 6.08438 21.0474 4.99581 24 5.00001C25.4027 5.00001 26.7493 5.24001 28 5.68268V24.6827C26.7152 24.2294 25.3624 23.9985 24 24C21.0475 23.9959 18.1979 25.0845 16 27.056M16 8.05601V27.056" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Promote Your Published Book</p>
+                </div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

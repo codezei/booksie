@@ -1,0 +1,60 @@
+include ../../mixins/cards/limited-card
+include ../../mixins/slider-navigation
+
+.swiper.limited-swiper.overflow-swiper
+    .swiper-wrapper
+        .swiper-slide.h-auto
+            +limited-card(
+                "Anatomy of an Awesome Campfire", 
+                "by A. Natalya Martin", 
+                "#", 
+                "img/limited-book-1.jpg", 
+                "Building a campfire is an ancient skill that spans the breadth of human history, providing...", 
+                "200 1 Collected!"
+                )
+        .swiper-slide.h-auto
+            +limited-card(
+                "Ascendence - A New Hope for America", 
+                "by Ascendance for America", 
+                "#", 
+                "img/limited-book-2.jpg", 
+                "Ascendance is the new political philosophy for the 21st century that offers hope for managing...", 
+                "500 6 Collected!"
+                )
+        .swiper-slide.h-auto
+            +limited-card(
+                "The Bucket List of Poems to Read Before You Die", 
+                "y André Cronje", 
+                "#", 
+                "img/limited-book-3.jpg", 
+                "The Bucket List of Poems to Read Before You Die is a challenge you must complete. It’s a poetic odyssey...", 
+                "500 1 Collected!"
+                )
+        .swiper-slide.h-auto
+            +limited-card(
+                "Bro.Bubba Redneck Bible Stories Adam and Eve Edition", 
+                "by A. Natalya Martin", 
+                "#", 
+                "img/limited-book-4.jpg", 
+                "Building a campfire is an ancient skill that spans the breadth of human history, providing...", 
+                "500 1 Collected!"
+                )
+        .swiper-slide.h-auto
+            +limited-card(
+                "Bro.Bubba Redneck Bible Stories Adam and Eve Edition", 
+                "by A. Natalya Martin", 
+                "#", 
+                "img/limited-book-5.jpg", 
+                "Building a campfire is an ancient skill that spans the breadth of human history, providing...", 
+                "600 1 Collected!"
+                )
+        .swiper-slide.h-auto
+            +limited-card(
+                "Echoes of Solitude: A Final Goodbye in the Cold", 
+                "by A. Natalya Martin", 
+                "#", 
+                "img/limited-book-6.jpg", 
+                "Echoes of Solitude: A Final Goodbye in the Cold In the heart of a bustling city, an elderly homeless...", 
+                "100 5 Collected!"
+                )
++slider-navigation("limited")

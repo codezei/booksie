@@ -1,0 +1,21 @@
+mixin writing-contest-card(src, tag, title, link)
+    .card.bg-light.border-0.h-100.fw-medium
+        .card-body
+            p
+                img.card-img(src=src, alt="")
+            p
+                a.btn.btn-outline-danger.btn-sm.text-uppercase(href=tag.link)= tag.text
+            h4.card-title= title
+            p.text-secondary.card-text
+                span.text-black Entry cost: $6.99 
+                |  ($3.50 for 
+                a.card-link(href="") Premium members
+                | )
+            p.text-secondary.card-text
+                span.text-black Prize:
+                span.text-black  $500
+                |  cash, a gold contest badge and optional publication.
+                |  Runner-ups: 
+                span.text-black $100 cash, a silver contest badge, and optional publication.
+        .card-footer.border-0.pt-0
+            a.btn.btn-primary(href=link.href)= link.text

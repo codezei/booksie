@@ -1,0 +1,18 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "My Houses";
+
+append head
+
+append content
+  include components/header
+  include components/houses/my-houses
+  include components/new-books
+  include components/houses/other
+  include components/houses/premium
+
+append scripts

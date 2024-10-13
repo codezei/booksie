@@ -1,0 +1,52 @@
+section.my-6.my-lg-9 
+    .container 
+        .row.justify-content-center
+            .col-12.col-xl-10.col-xxl-8
+                h2.text-center Promote your Published Book
+                p.text-center.text-secondary.mb-4.mb-lg-6 Booksie Promote is a new way to promote books that you've published and are selling on Amazon, B&N, your personal site, or any other site. Ads for your book are placed in front of readers in prominent spots across Booksie, including the homepage, the read pages, and at the bottom of posted content. The cost to promote a book is $3.99 per day. Space is limited.Read more about Booksie Promote or fill out the information below to get started.
+                form
+                    .row.g-3
+                        .col-12.col-sm-6 
+                            label(for="book-title") 
+                                span.h6 Published Book Title
+                                sup.text-primary *
+                        .col-12.col-sm-6
+                            input.form-control(type="text", required, id="book-title", name="book-title")
+                        .col-12 
+                            hr
+                        .col-12.col-md-6 
+                            label(for="book-image") 
+                                span.h6 Promote Cover Image
+                                sup.text-primary *
+                                span.text-secondary.d-block Please add the url where more information about the book can be found (i.e. https://www.amazon.com/...). Required to prefix with https and domain.
+                        .col-12.col-md-6
+                            .d-flex.g-3
+                                .bg-light.px-4.py-2.position-relative.d-flex.align-items-center.justify-content-center.me-3
+                                    div
+                                        img.rounded(src="img/houses-img-5.jpg", alt="")
+                                    div.position-absolute.end-0.top-0
+                                        button(type="button").btn.btn-primary.p-1.lh-1
+                                            svg(width="12", height="14", viewBox="0 0 12 14", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                                path(d="M8.33333 3.49996V3.03329C8.33333 2.3799 8.33333 2.0532 8.20617 1.80364C8.09432 1.58411 7.91584 1.40564 7.69632 1.29379C7.44676 1.16663 7.12006 1.16663 6.46667 1.16663H5.53333C4.87994 1.16663 4.55324 1.16663 4.30368 1.29379C4.08416 1.40564 3.90568 1.58411 3.79383 1.80364C3.66667 2.0532 3.66667 2.3799 3.66667 3.03329V3.49996M4.83333 6.70829V9.62496M7.16667 6.70829V9.62496M0.75 3.49996H11.25M10.0833 3.49996V10.0333C10.0833 11.0134 10.0833 11.5034 9.89259 11.8778C9.72482 12.2071 9.4571 12.4748 9.12782 12.6426C8.75347 12.8333 8.26342 12.8333 7.28333 12.8333H4.71667C3.73657 12.8333 3.24653 12.8333 2.87218 12.6426C2.5429 12.4748 2.27518 12.2071 2.10741 11.8778C1.91667 11.5034 1.91667 11.0134 1.91667 10.0333V3.49996", stroke="white", stroke-linecap="round", stroke-linejoin="round")
+                                label(for="book-image").drop.py-3.px-5.border.rounded.text-center
+                                    span.btn.btn-outline-secondary.p-2.mb-2 
+                                        svg(width="20", height="20", viewBox="0 0 20 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                            path(d="M6.66797 13.3333L10.0013 10M10.0013 10L13.3346 13.3333M10.0013 10V17.5M16.668 13.9524C17.6859 13.1117 18.3346 11.8399 18.3346 10.4167C18.3346 7.88536 16.2826 5.83333 13.7513 5.83333C13.5692 5.83333 13.3989 5.73833 13.3064 5.58145C12.2197 3.73736 10.2133 2.5 7.91797 2.5C4.46619 2.5 1.66797 5.29822 1.66797 8.75C1.66797 10.4718 2.36417 12.0309 3.49043 13.1613", stroke="currentColor", stroke-width="1.66667", stroke-linecap="round", stroke-linejoin="round")
+                                    span.d-block.mb-1 
+                                        span.text-primary Click to upload 
+                                        | or drag and drop
+                                    span.d-block SVG, PNG, JPG or GIF (max. 800x400px)
+                                    input.form-control.d-none(type="file", required, id="book-image", name="book-image")
+                        .col-12 
+                            hr
+                        .col-12.col-sm-6 
+                            label(for="book-text") 
+                                span.h6 Promote Url
+                                sup.text-primary *
+                                span.text-secondary.d-block Please add the url where more information about the book can be found (i.e. https://www.amazon.com/...). Required to prefix with https and domain.
+                        .col-12.col-sm-6
+                            textarea.form-control(type="text", required, id="book-text", name="book-text", placeholder="Please add up to 60 words", rows="4")
+                        .col-12 
+                            hr
+                        .col-12 
+                            button(type="submit").btn.btn-primary Submit and go to Promote Calendar

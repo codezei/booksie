@@ -1,0 +1,21 @@
+mixin houses-card(title, src, data, text, link)
+    .card.border-0.h-100
+        .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 320px")
+            h6.text-center.card-title.w-100= title
+            div.position-relative.flex-fill
+                img.card-img.position-absolute.w-auto.translate-middle.top-50.start-50(src=src, alt="")
+        .card-body.px-0
+            .row.g-1.justify-content-between.mb-3.small
+                .col-6.small Members:
+                    = data.members
+                .col-6.small Language: 
+                    = data.language
+                .col-6.small Category: 
+                    a.text-decoration-none(href)= data.category
+                if data.house
+                    .col-6.small Bronze House:
+                        i.icon.icon-house.mx-1
+                        = data.house
+            p.text-secondary.small.card-text= text
+        .card-footer.p-0.border-0
+            a.card-link(href=link.href)= link.text

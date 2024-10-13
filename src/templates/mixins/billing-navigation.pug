@@ -1,0 +1,5 @@
+mixin billing-navigation(links)
+    .row.g-2.mb-2.mb-sm-4.mb-lg-6
+        each link in links
+            .col-auto.col-md-6.col-lg-auto.flex-fill.flex-lg-grow-0 
+                a.btn.btn-outline-primary.w-100(href=link.href, class=(link.active ? "active": ""))= link.text

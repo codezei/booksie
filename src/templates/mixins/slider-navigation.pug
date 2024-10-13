@@ -1,0 +1,8 @@
+mixin slider-navigation(name)
+    .swiper-navigation.text-center.mt-5
+        .btn.btn-outline-secondary.mx-2.rounded-circle.button-prev(class=name + "-button-prev")
+            svg(width="12", height="12", viewBox="0 0 12 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872", stroke="currentColor", stroke-width="1.5")
+        .btn.btn-outline-secondary.mx-2.rounded-circle.button-next(class=name + "-button-next")
+            svg(width="12", height="12", viewBox="0 0 12 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872", stroke="currentColor", stroke-width="1.5")

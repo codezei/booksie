@@ -1,0 +1,6 @@
+mixin breadcrumbs(page)
+    nav(aria-label="breadcrumb").mb-4.mb-lg-6
+        ol.breadcrumb
+            li.breadcrumb-item
+                a(href="#") Home
+            li.breadcrumb-item.active(aria-current="page")= page

@@ -1,0 +1,15 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Booksie Premium";
+
+append head
+
+append content
+  include components/header
+  include components/booksie-premium/booksie-premium
+
+append scripts

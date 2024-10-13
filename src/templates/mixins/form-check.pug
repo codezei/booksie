@@ -1,0 +1,4 @@
+mixin form-check(id, value, checked)
+    .form-check
+        input.form-check-input(type="checkbox", value=value, id=id, checked=checked ? true : false)
+        label.form-check-label.text-secondary.small(for=id)= value

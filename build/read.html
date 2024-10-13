@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Read</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg fw-medium"><a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item mx-xxl-4"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./read.html">Read</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./all-houses.html">Houses</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./contest.html">Contests</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./shop.html">Shop</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./bookstore.html">Bookstore</a></li>
+          </ul>
+          <ul class="navbar-nav me-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.58333 18.1251C4.875 18.1251 1.04167 14.2917 1.04167 9.58341C1.04167 4.87508 4.875 1.04175 9.58333 1.04175C14.2917 1.04175 18.125 4.87508 18.125 9.58341C18.125 14.2917 14.2917 18.1251 9.58333 18.1251ZM9.58333 2.29175C5.55833 2.29175 2.29167 5.56675 2.29167 9.58341C2.29167 13.6001 5.55833 16.8751 9.58333 16.8751C13.6083 16.8751 16.875 13.6001 16.875 9.58341C16.875 5.56675 13.6083 2.29175 9.58333 2.29175Z" fill="black"></path>
+                  <path d="M18.3333 18.9583C18.175 18.9583 18.0167 18.9 17.8917 18.775L16.225 17.1083C15.9833 16.8666 15.9833 16.4666 16.225 16.225C16.4667 15.9833 16.8667 15.9833 17.1083 16.225L18.775 17.8916C19.0167 18.1333 19.0167 18.5333 18.775 18.775C18.65 18.9 18.4917 18.9583 18.3333 18.9583Z" fill="black"></path>
+                </svg></a>
+            <li class="nav-item"><a class="nav-link text-decoration-underline" href="#">Login</a></li>
+            </li>
+          </ul><a class="btn btn-primary me-3" href="#">Join</a><a class="btn btn-dark" href="#">Post Your Writing</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="mb-6 mb-lg-9">
+    <div class="container">
+      <nav class="mb-4 mb-lg-6" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Writing Contests</li>
+        </ol>
+      </nav>
+      <h2 class="text-center mb-4 mb-md-6 text-md-start">Find something great to Read</h2>
+      <div class="row g-3 justify-content-between mb-2 mb-sm-4 mb-lg-6">
+        <div class="col-12 col-sm-6 col-md-5">
+          <form method="GET">
+            <div class="input-group"><input class="form-control" type="text" placeholder="Find a Publishing House" name="search"><span class="input-group-text"><svg class="bi bi-search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path></svg></span></div>
+          </form>
+        </div>
+        <div class="col-12 col-sm-6 col-md-5">
+          <form method="GET"><select class="form-select" aria-label="Order by" name="ordered">
+              <option selected>Order by</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select></form>
+        </div>
+        <div class="col-12">
+          <div class="row g-3">
+            <div class="col-12 col-md-3 col-xl-3 col-xxl-2"><button class="btn btn-dark w-100 mb-3 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target=".collapse-filter" aria-expanded="false" aria-controls="collapseExample">Filter</button>
+              <div class="collapse d-md-block collapse-filter">
+                <div class="small">Found 4000 results</div><a class="text-danger small" href="">Clear all</a>
+                <hr>
+                <div class="accordion accordion-flush" id="accordion-filter">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-genres">
+                      <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-genres" aria-expanded="false" aria-controls="flush-genres"><span class="small text-uppercase">Genres</span></div>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="flush-genres" aria-labelledby="flush-heading-genres" data-bs-parent="#accordion-filter">
+                      <div class="accordion-body">
+                        <form id="form-filter-genres" method="GET">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Action and Adventure" id="action-and-adventure" checked><label class="form-check-label text-secondary small" for="action-and-adventure">Action and Adventure</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Children Stories" id="children-stories"><label class="form-check-label text-secondary small" for="children-stories">Children Stories</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Commercial Fiction" id="commercial-fiction"><label class="form-check-label text-secondary small" for="commercial-fiction">Commercial Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Editorial and Opinion" id="editorial-and-opinion"><label class="form-check-label text-secondary small" for="editorial-and-opinion">Editorial and Opinion</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Fan Fiction" id="fan-fiction"><label class="form-check-label text-secondary small" for="fan-fiction">Fan Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Fantasy" id="fantasy"><label class="form-check-label text-secondary small" for="fantasy">Fantasy</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Flash Fiction" id="flash-fiction"><label class="form-check-label text-secondary small" for="flash-fiction">Flash Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Gay and Lesbian" id="gay-and-lesbian"><label class="form-check-label text-secondary small" for="gay-and-lesbian">Gay and Lesbian</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Health and Fitness" id="health-and-fitness"><label class="form-check-label text-secondary small" for="health-and-fitness">Health and Fitness</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Historical Fiction" id="historical-fiction"><label class="form-check-label text-secondary small" for="historical-fiction">Historical Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Horror" id="horror"><label class="form-check-label text-secondary small" for="horror">Horror</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Humor" id="humor"><label class="form-check-label text-secondary small" for="humor">Humor</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Jokes" id="jokes"><label class="form-check-label text-secondary small" for="jokes">Jokes</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Literary Fiction" id="literary-fiction"><label class="form-check-label text-secondary small" for="literary-fiction">Literary Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Mystery and Crime" id="mystery-and-crime"><label class="form-check-label text-secondary small" for="mystery-and-crime">Mystery and Crime</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Non-Fiction" id="non-fiction"><label class="form-check-label text-secondary small" for="non-fiction">Non-Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Other" id="other"><label class="form-check-label text-secondary small" for="other">Other</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Personal Finance" id="personal-finance"><label class="form-check-label text-secondary small" for="personal-finance">Personal Finance</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Poetry" id="poetry"><label class="form-check-label text-secondary small" for="poetry">Poetry</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Religion and Spirituality" id="religion-and-spirituality"><label class="form-check-label text-secondary small" for="religion-and-spirituality">Religion and Spirituality</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Riddles" id="riddles"><label class="form-check-label text-secondary small" for="riddles">Riddles</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Romance" id="romance"><label class="form-check-label text-secondary small" for="romance">Romance</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Science Fiction" id="science-fiction"><label class="form-check-label text-secondary small" for="science-fiction">Science Fiction</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Song Lyrics" id="song-lyrics"><label class="form-check-label text-secondary small" for="song-lyrics">Song Lyrics</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Sports" id="sports"><label class="form-check-label text-secondary small" for="sports">Sports</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Thrillers" id="thrillers"><label class="form-check-label text-secondary small" for="thrillers">Thrillers</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Travel" id="travel"><label class="form-check-label text-secondary small" for="travel">Travel</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="True Confessions" id="true-confessions"><label class="form-check-label text-secondary small" for="true-confessions">True Confessions</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="War and Military" id="war-and-military"><label class="form-check-label text-secondary small" for="war-and-military">War and Military</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Westerns" id="westerns"><label class="form-check-label text-secondary small" for="westerns">Westerns</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Young Adult" id="young-adult"><label class="form-check-label text-secondary small" for="young-adult">Young Adult</label></div>
+                        </form>
+                        <script>
+                          const formFilterGenres = document.querySelector('#form-filter-genres')
+                          formFilterGenres.addEventListener('change', function(e) {
+                            //...
+                          })
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-type">
+                      <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-type" aria-expanded="false" aria-controls="flush-type"><span class="small text-uppercase">Types</span></div>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="flush-type" aria-labelledby="flush-heading-type" data-bs-parent="#accordion-filter">
+                      <div class="accordion-body">
+                        <form id="form-filter-type" method="GET">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Book" id="book"><label class="form-check-label text-secondary small" for="book">Book</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Short Story" id="short-story"><label class="form-check-label text-secondary small" for="short-story">Short Story</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Poem" id="poem"><label class="form-check-label text-secondary small" for="poem">Poem</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Script" id="script"><label class="form-check-label text-secondary small" for="script">Script</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Essay" id="essay"><label class="form-check-label text-secondary small" for="essay">Essay</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Article" id="article"><label class="form-check-label text-secondary small" for="article">Article</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Book Review" id="book-review"><label class="form-check-label text-secondary small" for="book-review">Book Review</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Business Writing" id="business-writing"><label class="form-check-label text-secondary small" for="business-writing">Business Writing</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Miscellaneous" id="miscellaneous"><label class="form-check-label text-secondary small" for="miscellaneous">Miscellaneous</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Writing Contest" id="writing-contest"><label class="form-check-label text-secondary small" for="writing-contest">Writing Contest</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Guide" id="guide"><label class="form-check-label text-secondary small" for="guide">Guide</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Humor" id="humor"><label class="form-check-label text-secondary small" for="humor">Humor</label></div>
+                        </form>
+                        <script>
+                          const formFilterType = document.querySelector('#form-filter-type')
+                          formFilterGenres.addEventListener('change', function(e) {
+                            //...
+                          })
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading-language">
+                      <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-language" aria-expanded="false" aria-controls="flush-language"><span class="small text-uppercase">Languages</span></div>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="flush-language" aria-labelledby="flush-heading-language" data-bs-parent="#accordion-filter">
+                      <div class="accordion-body">
+                        <form id="form-filter-language" method="GET">
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="English" id="english"><label class="form-check-label text-secondary small" for="english">English</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="French" id="french"><label class="form-check-label text-secondary small" for="french">French</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="German" id="german"><label class="form-check-label text-secondary small" for="german">German</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Italian" id="italian"><label class="form-check-label text-secondary small" for="italian">Italian</label></div>
+                          <div class="form-check"><input class="form-check-input" type="checkbox" value="Portuguese" id="portuguese"><label class="form-check-label text-secondary small" for="portuguese">Portuguese</label></div>
+                        </form>
+                        <script>
+                          const formFilterLanguages = document.querySelector('#form-filter-language')
+                          formFilterGenres.addEventListener('change', function(e) {
+                            //...
+                          })
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9 col-xl-9 col-xxl-10">
+              <div class="collapse d-md-block collapse-filter">
+                <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
+                  <li class="nav-item m-1" role="presentation"><button class="btn btn-outline-primary w-100 active" id="pills-new-tab" data-bs-toggle="pill" data-bs-target="#pills-new" type="button" role="tab" aria-controls="pills-new" aria-selected="true">New</button></li>
+                  <li class="nav-item m-1" role="presentation"><button class="btn btn-outline-primary w-100" id="pills-popular-shelves-tab" data-bs-toggle="pill" data-bs-target="#pills-popular-shelves" type="button" role="tab" aria-controls="pills-popular-shelves" aria-selected="false">Popular Shelves</button></li>
+                  <li class="nav-item m-1" role="presentation"><button class="btn btn-outline-primary w-100" id="pills-popular-reads-tab" data-bs-toggle="pill" data-bs-target="#pills-popular-reads" type="button" role="tab" aria-controls="pills-popular-reads" aria-selected="false">Popular Reads</button></li>
+                  <li class="nav-item m-1" role="presentation"><button class="btn btn-outline-primary w-100" id="pills-contest-winners-tab" data-bs-toggle="pill" data-bs-target="#pills-contest-winners" type="button" role="tab" aria-controls="pills-contest-winners" aria-selected="false">Contest Winners</button></li>
+                  <li class="nav-item m-1" role="presentation"><button class="btn btn-outline-primary w-100" id="pills-audio-books-tab" data-bs-toggle="pill" data-bs-target="#pills-audio-books" type="button" role="tab" aria-controls="pills-audio-books" aria-selected="false">Audio Books</button></li>
+                </ul>
+              </div>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-new" role="tabpanel" aria-labelledby="pills-new-tab">
+                  <div class="row gy-3">
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Braided Wigs: Trends in Length and Style</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>CelestialDuck</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-1.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Fantasy</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Chrysalis Days &amp; Butterfly Nights</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>JanKarlsson</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-2.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Literary Fiction</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Braided Wigs: Trends in Length and Style</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>h j furl</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-3.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Short Story</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">True Confessions</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Pappus and Sonder: The Screenplay</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>SLK</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-4.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Short Story</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">True Confessions</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-popular-shelves" role="tabpanel" aria-labelledby="pills-popular-shelves-tab">
+                  <div class="row gy-3">
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Braided Wigs: Trends in Length and Style</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>CelestialDuck</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-1.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Fantasy</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Chrysalis Days &amp; Butterfly Nights</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>JanKarlsson</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-2.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Literary Fiction</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Braided Wigs: Trends in Length and Style</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>h j furl</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-3.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Short Story</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">True Confessions</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-popular-reads" role="tabpanel" aria-labelledby="pills-popular-reads-tab">
+                  <div class="row gy-3">
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Braided Wigs: Trends in Length and Style</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>CelestialDuck</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-1.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Fantasy</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Chrysalis Days &amp; Butterfly Nights</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>JanKarlsson</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-2.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Literary Fiction</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contest-winners" role="tabpanel" aria-labelledby="pills-contest-winners-tab">
+                  <div class="row gy-3">
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Braided Wigs: Trends in Length and Style</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>CelestialDuck</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-1.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Book</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">Fantasy</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-audio-books" role="tabpanel" aria-labelledby="pills-audio-books-tab">
+                  <div class="row gy-3">
+                    <div class="col-6 col-md-6 col-xl-4 col-xxl-3">
+                      <div class="card border-0 h-100 small">
+                        <div class="bg-light p-3 card-img d-flex flex-column justify-content-between" style="height: 380px">
+                          <h6 class="text-center card-title">Pappus and Sonder: The Screenplay</h6>
+                          <p class="text-secondary text-uppercase text-center">by <u>SLK</u></p>
+                          <div class="position-relative flex-fill mb-3"><img class="card-img position-absolute h-100 w-auto translate-middle top-50 start-50" src="img/read-book-4.jpg" alt=""></div>
+                          <div class="text-center small"><span class="badge m-1 fw-medium p-2 text-uppercase bg-primary">Short Story</span><span class="badge m-1 fw-medium p-2 text-uppercase bg-warning text-dark">True Confessions</span></div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                          <p class="text-secondary">September 05, 2024</p>
+                          <div class="row g-1 justify-content-between mb-3">
+                            <div class="col-6"><i class="icon icon-reads"></i>&nbsp;<span>Reads</span>&nbsp;<span>1734</span></div>
+                            <div class="col-6"><i class="icon icon-comments"></i>&nbsp;<span>Comments</span>&nbsp;<span>512</span></div>
+                            <div class="col-6"><i class="icon icon-shelves"></i>&nbsp;<span>Shelves</span>&nbsp;<span>2</span></div>
+                            <div class="col-6"><i class="icon icon-likes"></i>&nbsp;<span>Likes</span>&nbsp;<span>421</span></div>
+                          </div>
+                          <p class="text-secondary card-text">This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...</p>
+                        </div>
+                        <div class="card-footer border-0 px-0 pb-0"><a class="card-link fw-medium" href="#">Read more</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="mt-5 mt-lg-6 d-flex justify-content-center">
+        <ul class="pagination mb-0">
+          <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="py-6 py-9 bg-light">
+    <div class="container">
+      <h2 class="mb-5 mb-lg-7 text-center">Discover New Books</h2>
+      <div class="swiper new-books-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-1.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Monarch</h4>
+                <p class="card-text text-secondary text-uppercase small">by Cobber</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-2.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Where Dragons Rule: Dissent (Old Ver)</h4>
+                <p class="card-text text-secondary text-uppercase small">by Sonny Dae</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-3.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">Choose Your Seaside Adventure</h4>
+                <p class="card-text text-secondary text-uppercase small">by toadstoolwoods</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-4.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Divine Diamond Highway</h4>
+                <p class="card-text text-secondary text-uppercase small">by Thomas LaHomme</p>
+              </div>
+            </a></div>
+          <div class="swiper-slide"><a class="card border-0 bg-transparent" href="#">
+              <div class="ratio-3x4 p-3 p-lg-5 card-img d-flex align-items-center justify-content-center bg-white"><img class="card-img" src="img/ebooks-book-4.jpg" alt=""></div>
+              <div class="card-body text-center px-0">
+                <h4 class="card-title">The Rockstar - Beginnings</h4>
+                <p class="card-text text-secondary text-uppercase small">by RoyBoy</p>
+              </div>
+            </a></div>
+        </div>
+      </div>
+      <div class="swiper-navigation text-center mt-5">
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-prev new-books-button-prev"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+        <div class="btn btn-outline-secondary mx-2 rounded-circle button-next new-books-button-next"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 5.88721H10.5M10.5 5.88721L5.5 0.887207M10.5 5.88721L5.5 10.8872" stroke="currentColor" stroke-width="1.5"></path>
+          </svg></div>
+      </div>
+      <div class="text-center mt-5"><a class="btn btn-outline-primary" href="#">Read More eBooks</a></div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white py-6 py-lg-9">
+    <div class="container">
+      <div class="row g-3 justify-content-xl-between">
+        <div class="col-12 col-md-6 col-lg-3">
+          <p class="text-center text-md-start mb-5 mb-lg-6"><a class="navbar-brand" href="./index.html"><img src="img/logo-footer.svg" alt=""></a></p>
+          <p class="text-center text-md-start">BOOKSIE © 2024 | All rights reserved. Terms under which this service is provided to you. Privacy Policy.</p>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Read Houses</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Members</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Tags</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Writing Resources</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Top 100 Love Poems</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Help Guide</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Publishing Advisor</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3">
+          <div class="row g-3">
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_440_1615)"></g>
+                    <path d="M19.9974 13.3334V28L13.3307 24L6.66406 28V13.3334C6.66406 12.2725 7.08549 11.2551 7.83564 10.5049C8.58578 9.7548 9.6032 9.33337 10.6641 9.33337H15.9974C17.0583 9.33337 18.0757 9.7548 18.8258 10.5049C19.576 11.2551 19.9974 12.2725 19.9974 13.3334Z" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.6641 4H21.3307C22.3916 4 23.409 4.42143 24.1592 5.17157C24.9093 5.92172 25.3307 6.93913 25.3307 8V22.6667" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <defs>
+                      <clippath id="clip0_440_1615"></clippath>
+                      <rect width="32" height="32" fill="white"></rect>
+                    </defs>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Booksie Limited Editions</p>
+                </div>
+              </a></div>
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8.05601C13.8021 6.08449 10.9525 4.99594 8 5.00001C6.59733 5.00001 5.25067 5.24001 4 5.68268V24.6827C5.28483 24.2294 6.63755 23.9985 8 24C11.0733 24 13.8773 25.156 16 27.056M16 8.05601C18.1978 6.08438 21.0474 4.99581 24 5.00001C25.4027 5.00001 26.7493 5.24001 28 5.68268V24.6827C26.7152 24.2294 25.3624 23.9985 24 24C21.0475 23.9959 18.1979 25.0845 16 27.056M16 8.05601V27.056" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Promote Your Published Book</p>
+                </div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

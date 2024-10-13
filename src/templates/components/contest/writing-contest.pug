@@ -1,0 +1,62 @@
+include ../../mixins/breadcrumbs
+include ../../mixins/cards/writing-contest-card
+
+div.mt-4.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Writing Contests")
+        .row.g-3 
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-1.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "The Booksie 2024 Short Story Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-2.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "National Story Telling Week Writing Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-3.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "Dawn of AI Short Story Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-1.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "The Booksie 2024 Short Story Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-2.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "National Story Telling Week Writing Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-3.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "Dawn of AI Short Story Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-1.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "The Booksie 2024 Short Story Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-2.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "National Story Telling Week Writing Contest",
+                    {href: "#", text: "Learn More"})
+            .col-12.col-sm-6.col-lg-4
+                +writing-contest-card(
+                    "img/writing-contest-img-3.png", 
+                    {href:"#", text: "Contest Closed"}, 
+                    "Dawn of AI Short Story Contest",
+                    {href: "#", text: "Learn More"})
+        include ../pagination

@@ -1,0 +1,11 @@
+mixin boosted-card(link, src, title, views, author)
+    .card.border-0.h-100.flex-row.align-items-center
+        img.card-img.w-50(src=src, alt="")
+        .card-body.pe-0
+            h4.card-title= title
+            p.card-text.text-muted.text-uppercase.small
+                i.icon.icon-views
+                span.small= views
+                    |  views
+            p.card-text.text-muted.text-uppercase.small= author
+            a.card-link(href=link.href)= link.text

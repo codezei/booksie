@@ -1,0 +1,33 @@
+// Bootstrap params
+$font-family-base: "Neue Montreal", sans-serif;
+$body-color: #000;
+$grid-gutter-width: 1.5rem;
+$grid-gutter-height: 1.5rem;
+$gutter: $grid-gutter-width;
+$primary: #276cda;
+$secondary: #6F6F6F;
+$dark: #0D2B5A;
+$light: #F2F6FD;
+$btn-padding-y: 12px;
+$btn-padding-x: 32px;
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg width='3' height='4' viewBox='0 0 3 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1.5' cy='2' r='1.5' fill='%23DADADA'/%3E%3C/svg%3E%0A");
+$card-cap-bg: inherit;
+$card-cap-padding-y: 1rem;
+$spacer: 1rem;
+$form-check-input-checked-color: $secondary;
+$form-check-input-checked-border-color: rgba(#000, .25);
+$form-check-input-checked-bg-color: transparent;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 4,
+  8: $spacer * 5,
+  9: $spacer * 6,
+  10: $spacer * 7,
+);
+@import 'node_modules/bootstrap/scss/bootstrap.scss';

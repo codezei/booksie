@@ -1,0 +1,13 @@
+mixin limited-card(title, author, href, src, text, collection)
+        .d-flex.flex-column.text-center.h-100
+            h6.mh-2= title
+            .text-secondary.text-uppercase.mb-3.small 
+                span.small= author
+            a(href=href).card.flex-fill
+                img.card-img-top(src=src, alt="")
+                .card-body.bg-white
+                    p.card-text.text-secondary.small 
+                        span.small= text
+                .card-footer.bg-white.pt-0.border-0
+                    p.card-text.text-uppercase.text-secondary.small.fw-medium MAX: 
+                            =collection

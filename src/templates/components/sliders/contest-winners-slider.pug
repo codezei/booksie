@@ -1,0 +1,18 @@
+include ../../mixins/cards/contest-winners-card
+include ../../mixins/slider-navigation
+
+.swiper.contest-winners-swiper
+    .swiper-wrapper
+        .swiper-slide
+            +contest-winners-card("#", "img/winners-book-1.jpg", "label-favorite", "My Brother Is Black", "by A. Natalya Martin")
+        .swiper-slide
+            +contest-winners-card("#", "img/winners-book-2.jpg", "label-winner", "Lesson Learned", "by A. Natalya Martin")
+        .swiper-slide
+            +contest-winners-card("#", "img/winners-book-3.jpg", "label-winner", "Effects of Mass Incarceration on African American Communities", "by Aboya")
+        .swiper-slide
+            +contest-winners-card("#", "img/winners-book-4.jpg", "label-winner", "On Skinned Knees", "by Zane Cray")
+        .swiper-slide
+            +contest-winners-card("#", "img/winners-book-5.jpg", "label-favorite", "On Skinned Knees", "by Zane Cray")
+        .swiper-slide
+            +contest-winners-card("#", "img/winners-book-6.jpg", "label-favorite", "Pussy Reaper’s Revenge", "by Joy Shaw")
++slider-navigation("contest-winners")

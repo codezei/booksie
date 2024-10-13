@@ -1,0 +1,12 @@
+mixin bookstore-card(src, title, author, text, btn, link)
+    .card.text-center.h-100.border-0 
+        img.card-img(src=src, alt="")
+        .card-body.px-0 
+            h6.card-title= title
+            p.text-secondary.text-uppercase by 
+                u= author
+            p.text-secondary.card-text= text
+        .card-footer.p-0.border-0 
+            p.card-text
+                a.btn.btn-primary(href=btn.href)= btn.text 
+            a.card-link(href=link.href)= link.text 

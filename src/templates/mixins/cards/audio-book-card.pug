@@ -1,0 +1,6 @@
+mixin audio-book-card(href, src, title, author)
+    a.card.border-0.h-100.bg-transparent(href=href)
+        img.card-img(src=src, alt="")
+        .card-body.text-center.px-0
+            h5.card-title= title
+            p.card-text.text-muted.text-uppercase.small= author

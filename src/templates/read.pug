@@ -1,0 +1,16 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Read";
+
+append head
+
+append content
+  include components/header
+  include components/read/read
+  include components/new-books
+
+append scripts

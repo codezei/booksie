@@ -1,0 +1,47 @@
+include ../../mixins/breadcrumbs
+include ../../mixins/houses-navigation
+include ../../mixins/cards/houses-card
+
+
+section.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Houses")
+        .row.align-items-center.justify-content-center.mb-4.md-lg-6.g-3
+            .col-12
+                h2.text-center.mb-0.text-md-start My Houses
+            //- .col-12.col-md-6.text-center.text-md-end
+            //-     button.btn.btn-primary
+            //-         svg.bi.bi-plus-lg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16')
+            //-             path(fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2')
+            //-         | Create House
+        .row.g-2.justify-content-between.mb-2.mb-sm-4.mb-lg-6
+            .col-12.col-sm-6.col-md-5
+                form(method='GET')
+                    .input-group
+                        input.form-control(type='text' placeholder='Find a Publishing House' name='search')
+                        span.input-group-text
+                            svg.bi.bi-search(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16')
+                                path(d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0')
+            .col-12.col-sm-6.col-md-5
+                form(method='GET')
+                    select.form-select(aria-label='Order by' name='ordered')
+                        option(selected) Order by
+                        option(value='1') One
+                        option(value='2') Two
+                        option(value='3') Three
+        +houses-navigation([
+            {href: "my-houses.html", text: "My Houses", active: true},
+            {href: "all-houses.html", text: "All Houses", active: false},
+            {href: "create-house.html", text: "Create House", active: false},
+            {href: "house-guide.html", text: "House Guide", active: false},
+            ],
+            {href:"#", text: "Leave House"})
+        .row.g-3
+            .col-6.col-md-6.col-xl-4.col-xxl-3
+                +houses-card(
+                    "Braided Wigs: Trends in Length and Style", 
+                    "img/houses-img-1.jpg", 
+                    {members: "8", language: "English", category: "Religious"},
+                    "Public access to join. (you don't need moderator permission to join)",
+                    {href: "#", text: "Read More"})
+        include ../pagination

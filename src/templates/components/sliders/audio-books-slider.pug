@@ -1,0 +1,12 @@
+include ../../mixins/cards/audio-book-card
+include ../../mixins/slider-navigation
+
+.swiper.featured-audio-swiper
+    .swiper-wrapper
+        .swiper-slide
+            +audio-book-card("#", "img/audio-book-1.jpg", "Brought Together", "by mmckenz11")
+        .swiper-slide
+            +audio-book-card("#", "img/audio-book-2.jpg", "What would you look for with the James Webb telescope?", "by Guenevere Lee")
+        .swiper-slide
+            +audio-book-card("#", "img/audio-book-3.jpg", "Look after yourself", "by mmckenz11")
++slider-navigation("featured-audio")

@@ -1,0 +1,202 @@
+include ../../mixins/breadcrumbs
+include ../../mixins/houses-navigation
+include ../../mixins/cards/houses-card
+
+include modal
+section.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Houses")
+        .row.align-items-center.justify-content-center.mb-4.md-lg-6.g-3
+            .col-12.col-md-6
+                h2.text-center.mb-0.text-md-start All Publishing Houses
+            .col-12.col-md-6.text-center.text-md-end
+                button.btn.btn-primary(data-bs-toggle="modal", data-bs-target="#create-house-modal")
+                    svg.bi.bi-plus-lg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16')
+                        path(fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2')
+                    | Create House
+        .row.g-2.justify-content-between.mb-2.mb-sm-4.mb-lg-6
+            .col-12.col-sm-6.col-md-5
+                form(method='GET')
+                    .input-group
+                        input.form-control(type='text' placeholder='Find a Publishing House' name='search')
+                        span.input-group-text
+                            svg.bi.bi-search(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16')
+                                path(d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0')
+            .col-12.col-sm-6.col-md-5
+                form(method='GET')
+                    select.form-select(aria-label='Order by' name='ordered')
+                        option(selected) Order by
+                        option(value='1') One
+                        option(value='2') Two
+                        option(value='3') Three
+        +houses-navigation([
+            {href: "my-houses.html", text: "My Houses", active: false},
+            {href: "all-houses.html", text: "All Houses", active: true},
+            {href: "create-house.html", text: "Create House", active: false},
+            {href: "house-guide.html", text: "House Guide", active: false},
+            ])
+        .row.gy-3
+            .col-12.col-md-3.col-xl-3.col-xxl-2
+                button.btn.btn-dark.w-100.mb-3.d-md-none(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-category-form' aria-expanded='false' aria-controls='collapseExample')
+                    | Filter
+                #collapse-category-form.collapse.d-md-block
+                    .small All categories
+                    a.text-danger.small(href) Clear all
+                    hr
+                    form(method='GET')
+                        .form-check
+                            input#category-check-0.form-check-input(type='checkbox' value='all' checked)
+                            label.form-check-label.text-secondary.small(for='category-check-0') All Categories
+                        .form-check
+                            input#category-check-1.form-check-input(type='checkbox' value='science-fiction')
+                            label.form-check-label.text-secondary.small(for='category-check-1') Science Fiction
+                        .form-check
+                            input#category-check-2.form-check-input(type='checkbox' value='fantasy')
+                            label.form-check-label.text-secondary.small(for='category-check-2') Fantasy
+                        .form-check
+                            input#category-check-3.form-check-input(type='checkbox' value='romance')
+                            label.form-check-label.text-secondary.small(for='category-check-3') Romance
+                        .form-check
+                            input#category-check-4.form-check-input(type='checkbox' value='religious')
+                            label.form-check-label.text-secondary.small(for='category-check-4') Religious
+                        .form-check
+                            input#category-check-5.form-check-input(type='checkbox' value='personal')
+                            label.form-check-label.text-secondary.small(for='category-check-5') Personal
+                        .form-check
+                            input#category-check-6.form-check-input(type='checkbox' value='collaboration')
+                            label.form-check-label.text-secondary.small(for='category-check-6') Collaboration
+                        .form-check
+                            input#category-check-7.form-check-input(type='checkbox' value='writing-critique-groups')
+                            label.form-check-label.text-secondary.small(for='category-check-7') Writing Critique Groups
+                        .form-check
+                            input#category-check-8.form-check-input(type='checkbox' value='women')
+                            label.form-check-label.text-secondary.small(for='category-check-8') Women
+                        .form-check
+                            input#category-check-9.form-check-input(type='checkbox' value='poetry')
+                            label.form-check-label.text-secondary.small(for='category-check-9') Poetry
+                        .form-check
+                            input#category-check-10.form-check-input(type='checkbox' value='fan-fiction')
+                            label.form-check-label.text-secondary.small(for='category-check-10') Fan Fiction
+                        .form-check
+                            input#category-check-11.form-check-input(type='checkbox' value='politics')
+                            label.form-check-label.text-secondary.small(for='category-check-11') Politics
+                        .form-check
+                            input#category-check-12.form-check-input(type='checkbox' value='vampire-and-werewolf')
+                            label.form-check-label.text-secondary.small(for='category-check-12') Vampire and Werewolf
+                        .form-check
+                            input#category-check-13.form-check-input(type='checkbox' value='horror')
+                            label.form-check-label.text-secondary.small(for='category-check-13') Horror
+                        .form-check
+                            input#category-check-14.form-check-input(type='checkbox' value='other')
+                            label.form-check-label.text-secondary.small(for='category-check-14') Other
+                        .form-check
+                            input#category-check-15.form-check-input(type='checkbox' value='publishing')
+                            label.form-check-label.text-secondary.small(for='category-check-15') Publishing
+                        .form-check
+                            input#category-check-16.form-check-input(type='checkbox' value='anime')
+                            label.form-check-label.text-secondary.small(for='category-check-16') Anime
+                        .form-check
+                            input#category-check-17.form-check-input(type='checkbox' value='humor')
+                            label.form-check-label.text-secondary.small(for='category-check-17') Humor
+                        .form-check
+                            input#category-check-18.form-check-input(type='checkbox' value='education')
+                            label.form-check-label.text-secondary.small(for='category-check-18') Education
+            .col-12.col-md-9.col-xl-9.col-xxl-10
+                .row.g-3
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Braided Wigs: Trends in Length and Style", 
+                            "img/houses-img-1.jpg", 
+                            {members: "8", language: "English", category: "Religious"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Booksie Limited Editions", 
+                            "img/houses-img-2.jpg", 
+                            {members: "8", language: "English", category: "Personal"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Lashley", 
+                            "img/houses-img-3.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "1"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-4.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-5.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Lashley", 
+                            "img/houses-img-3.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "1"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-4.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-5.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-5.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Lashley", 
+                            "img/houses-img-3.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "1"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-4.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                        +houses-card(
+                            "Real People", 
+                            "img/houses-img-5.jpg", 
+                            {members: "8", language: "English", category: "Personal", house: "3"},
+                            "Public access to join. (you don't need moderator permission to join)",
+                            {href: "#", text: "Read More"}
+                            )
+        include ../pagination

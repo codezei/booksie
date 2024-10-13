@@ -1,0 +1,14 @@
+include ../../mixins/cards/boosted-card
+include ../../mixins/slider-navigation
+
+.swiper.boosted-swiper.overflow-swiper
+    .swiper-wrapper
+        .swiper-slide
+            +boosted-card({href: "#", text: "Read More"}, "img/boosted-book-1.jpg", "Vase", "500", "by Aaron Moeller")
+        .swiper-slide
+            +boosted-card({href: "#", text: "Read More"}, "img/boosted-book-2.jpg", "Oldest Brew", "500", "by G.P.Sharp")
+        .swiper-slide
+            +boosted-card({href: "#", text: "Read More"}, "img/boosted-book-3.jpg", "Submerged", "500", "by Nika Ren")
+        .swiper-slide
+            +boosted-card({href: "#", text: "Read More"}, "img/boosted-book-4.jpg", "Paths", "500", "by Mara tells stories")
++slider-navigation("boosted")

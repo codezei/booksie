@@ -1,0 +1,22 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Home";
+
+append head
+
+append content
+    include components/header
+    include components/home/intro
+    include components/home/advantages
+    include components/home/description
+    include components/home/contest-winners
+    include components/home/boosted
+    include components/home/limited
+    include components/home/premium
+    include components/home/audio
+
+append scripts

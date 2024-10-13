@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg fw-medium"><a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item mx-xxl-4"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./read.html">Read</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./all-houses.html">Houses</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./contest.html">Contests</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./shop.html">Shop</a></li>
+            <li class="nav-item mx-xxl-4"><a class="nav-link" href="./bookstore.html">Bookstore</a></li>
+          </ul>
+          <ul class="navbar-nav me-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.58333 18.1251C4.875 18.1251 1.04167 14.2917 1.04167 9.58341C1.04167 4.87508 4.875 1.04175 9.58333 1.04175C14.2917 1.04175 18.125 4.87508 18.125 9.58341C18.125 14.2917 14.2917 18.1251 9.58333 18.1251ZM9.58333 2.29175C5.55833 2.29175 2.29167 5.56675 2.29167 9.58341C2.29167 13.6001 5.55833 16.8751 9.58333 16.8751C13.6083 16.8751 16.875 13.6001 16.875 9.58341C16.875 5.56675 13.6083 2.29175 9.58333 2.29175Z" fill="black"></path>
+                  <path d="M18.3333 18.9583C18.175 18.9583 18.0167 18.9 17.8917 18.775L16.225 17.1083C15.9833 16.8666 15.9833 16.4666 16.225 16.225C16.4667 15.9833 16.8667 15.9833 17.1083 16.225L18.775 17.8916C19.0167 18.1333 19.0167 18.5333 18.775 18.775C18.65 18.9 18.4917 18.9583 18.3333 18.9583Z" fill="black"></path>
+                </svg></a>
+            <li class="nav-item"><a class="nav-link text-decoration-underline" href="#">Login</a></li>
+            </li>
+          </ul><a class="btn btn-primary me-3" href="#">Join</a><a class="btn btn-dark" href="#">Post Your Writing</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="mb-6 mb-lg-9">
+    <div class="container">
+      <nav class="mb-4 mb-lg-6" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">All Content</li>
+        </ol>
+      </nav>
+      <div class="row g-3">
+        <div class="col-12 col-sm-4 col-md-5 col-lg-6 text-center"><img class="rounded" src="img/book-preview-img-1.jpg" alt=""></div>
+        <div class="col-12 col-sm-8 col-md-7 col-lg-6">
+          <div class="row justify-content-between align-items-center mb-3">
+            <div class="col-auto"><span class="badge bg-primary me-2 p-2 fw-medium text-uppercase">Short Story</span><span class="badge bg-warning p-2 fw-medium text-uppercase text-black">True Confessions</span></div>
+            <div class="col-auto"><button class="btn btn-outline-secondary rounded-circle p-3 d-flex align-items-center" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5275 8.54175C5.19917 8.54175 5.805 8.17008 6.22 7.64175C6.86688 6.81643 7.67893 6.13523 8.60417 5.64175C9.20667 5.32175 9.72917 4.84508 9.98167 4.21258C10.159 3.76946 10.2501 3.29654 10.25 2.81925V2.29175C10.25 2.12599 10.3159 1.96702 10.4331 1.84981C10.5503 1.7326 10.7092 1.66675 10.875 1.66675C11.3723 1.66675 11.8492 1.86429 12.2008 2.21592C12.5525 2.56755 12.75 3.04447 12.75 3.54175C12.75 4.50175 12.5333 5.41091 12.1475 6.22341C11.9258 6.68841 12.2367 7.29175 12.7517 7.29175M12.7517 7.29175H15.3567C16.2117 7.29175 16.9775 7.87008 17.0683 8.72091C17.1058 9.07258 17.125 9.42925 17.125 9.79175C17.1284 12.072 16.3492 14.2844 14.9175 16.0592C14.5942 16.4609 14.095 16.6667 13.58 16.6667H10.2333C9.83084 16.6667 9.43 16.6017 9.0475 16.4751L6.4525 15.6084C6.07009 15.4812 5.66968 15.4165 5.26667 15.4167H3.92M12.7517 7.29175H10.875M3.92 15.4167C3.98917 15.5876 4.06417 15.7542 4.145 15.9184C4.30917 16.2517 4.08 16.6667 3.70917 16.6667H2.9525C2.21167 16.6667 1.525 16.2351 1.30917 15.5267C1.02054 14.5795 0.874221 13.5945 0.875003 12.6042C0.875003 11.3101 1.12084 10.0742 1.5675 8.93925C1.8225 8.29425 2.4725 7.91675 3.16667 7.91675H4.04417C4.4375 7.91675 4.665 8.38008 4.46084 8.71675C3.74908 9.88837 3.37369 11.2334 3.37584 12.6042C3.37584 13.5992 3.56917 14.5484 3.92084 15.4167H3.92Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></button></div>
+          </div>
+          <h2>Braided Wigs: Trends in Length and Style</h2>
+          <div class="row align-items-center g-2 mb-2">
+            <div class="col-auto"><img src="img/book-ava-1.jpg" alt="" aria-colspan="rounded-circle"></div>
+            <div class="col-auto">
+              <div class="text-uppercase text-secondary small">by <u>JanKarlsson</u></div>
+            </div>
+          </div>
+          <div class="row mb-3 g-2 g-lg-3">
+            <div class="col-6 col-md-auto"><i class="icon icon-reads me-1"> </i><span>Reads: 1734</span></div>
+            <div class="col-6 col-md-auto"><i class="icon icon-comments me-1"></i><span>Comments: 512</span></div>
+            <div class="col-6 col-md-auto"><i class="icon icon-shelves me-1"> </i><span>Shelves: 2</span></div>
+            <div class="col-6 col-md-auto"><i class="icon icon-likes me-1"> </i><span>Likes: 421</span></div>
+          </div>
+          <div class="accordion accordion-flush" id="book-info">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"><span class="fw-medium text-secondary">September 05, 2024</span></button></h2>
+              <div class="accordion-collapse collapse" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#book-info">
+                <div class="accordion-body p-0 mt-lg-4">
+                  <hr>
+                  <div class="row small fs-lg-normal fw-medium gy-2">
+                    <div class="col-auto border-end small fs-lg-normal"><span class="text-secondary">Status:</span> Finished</div>
+                    <div class="col-auto border-end small fs-lg-normal"><span class="text-secondary">Genre:</span> Other</div>
+                    <div class="col-auto small fs-lg-normal"><span class="text-secondary">House:</span> Booksie Classic</div>
+                  </div>
+                  <hr>
+                  <p class="my-3 my-lg-6"><a class="me-2" href="">Add to Read List</a><a href="">Shelfit</a></p>
+                  <div>
+                    <p class="text-medium text-secondary">Share This On</p>
+                    <nav><a class="btn btn-light p-2 p-md-3 rounded-circle me-1" href="" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.0291 2.00073C14.1545 2.00259 14.7248 2.00855 15.2176 2.02322L15.4117 2.02956C15.6359 2.03753 15.8571 2.04753 16.1238 2.06003C17.1879 2.1092 17.9138 2.27753 18.5513 2.52503C19.2104 2.7792 19.7671 3.12253 20.3229 3.67837C20.8779 4.2342 21.2213 4.79253 21.4763 5.45003C21.7229 6.0867 21.8913 6.81337 21.9413 7.87753C21.9532 8.1442 21.9628 8.3654 21.9707 8.58964L21.977 8.78373C21.9916 9.27647 21.9983 9.84686 22.0004 10.9723L22.0012 11.7179C22.0013 11.809 22.0013 11.903 22.0013 12L22.0012 12.2821L22.0006 13.0278C21.9987 14.1532 21.9928 14.7236 21.9781 15.2163L21.9717 15.4104C21.9638 15.6347 21.9538 15.8559 21.9413 16.1225C21.8921 17.1867 21.7229 17.9125 21.4763 18.55C21.2221 19.2092 20.8779 19.7659 20.3229 20.3217C19.7671 20.8767 19.2079 21.22 18.5513 21.475C17.9138 21.7217 17.1879 21.89 16.1238 21.94C15.8571 21.9519 15.6359 21.9616 15.4117 21.9694L15.2176 21.9757C14.7248 21.9904 14.1545 21.997 13.0291 21.9992L12.2834 22C12.1923 22 12.0983 22 12.0013 22H11.7192L10.9735 21.9993C9.84807 21.9975 9.27769 21.9915 8.78494 21.9768L8.59086 21.9705C8.36661 21.9625 8.14541 21.9525 7.87875 21.94C6.81458 21.8909 6.08958 21.7217 5.45125 21.475C4.79291 21.2209 4.23541 20.8767 3.67958 20.3217C3.12375 19.7659 2.78125 19.2067 2.52625 18.55C2.27875 17.9125 2.11125 17.1867 2.06125 16.1225C2.04937 15.8559 2.03968 15.6347 2.03183 15.4104L2.02554 15.2163C2.01091 14.7236 2.00424 14.1532 2.00208 13.0278L2.00195 10.9723C2.00381 9.84686 2.00976 9.27647 2.02443 8.78373L2.03078 8.58964C2.03875 8.3654 2.04875 8.1442 2.06125 7.87753C2.11041 6.81253 2.27875 6.08753 2.52625 5.45003C2.78041 4.7917 3.12375 4.2342 3.67958 3.67837C4.23541 3.12253 4.79375 2.78003 5.45125 2.52503C6.08875 2.27753 6.81375 2.11003 7.87875 2.06003C8.14541 2.04816 8.36661 2.03847 8.59086 2.03062L8.78494 2.02433C9.27769 2.00969 9.84807 2.00302 10.9735 2.00086L13.0291 2.00073ZM12.0013 7.00003C9.23835 7.00003 7.00125 9.23956 7.00125 12C7.00125 14.7629 9.24078 17 12.0013 17C14.7642 17 17.0013 14.7605 17.0013 12C17.0013 9.23713 14.7617 7.00003 12.0013 7.00003ZM12.0013 9.00003C13.6582 9.00003 15.0013 10.3427 15.0013 12C15.0013 13.6569 13.6586 15 12.0013 15C10.3444 15 9.00125 13.6574 9.00125 12C9.00125 10.3431 10.3439 9.00003 12.0013 9.00003ZM17.2513 5.50003C16.562 5.50003 16.0013 6.05994 16.0013 6.74918C16.0013 7.43843 16.5612 7.9992 17.2513 7.9992C17.9405 7.9992 18.5013 7.4393 18.5013 6.74918C18.5013 6.05994 17.9396 5.49917 17.2513 5.50003Z" fill="black"></path>
+                        </svg></a><a class="btn btn-light p-2 p-md-3 rounded-circle me-1" href="" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M22 12.0607C22 6.504 17.5233 2 12 2C6.47667 2 2 6.504 2 12.0607C2 17.0833 5.656 21.2453 10.4373 22V14.9693H7.89867V12.06H10.4373V9.844C10.4373 7.32267 11.93 5.92933 14.2147 5.92933C15.308 5.92933 16.4533 6.126 16.4533 6.126V8.602H15.1913C13.9493 8.602 13.5627 9.378 13.5627 10.174V12.0607H16.336L15.8927 14.9687H13.5627V22C18.344 21.2453 22 17.0833 22 12.0607Z" fill="black"></path>
+                        </svg></a><a class="btn btn-light p-2 p-md-3 rounded-circle me-1" href="" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.792 5.41471C20.6521 5.64577 21.3325 6.32614 21.5635 7.18621C21.9872 8.75232 22 12.0001 22 12.0001C22 12.0001 22 15.2607 21.5764 16.8139C21.3453 17.674 20.665 18.3544 19.8049 18.5854C18.2516 19.0091 12 19.0091 12 19.0091C12 19.0091 5.7484 19.0091 4.19512 18.5854C3.33504 18.3544 2.65469 17.674 2.42362 16.8139C2 15.2478 2 12.0001 2 12.0001C2 12.0001 2 8.75232 2.41078 7.19905C2.64185 6.33897 3.32221 5.65861 4.18229 5.42755C5.73556 5.00392 11.9872 4.99109 11.9872 4.99109C11.9872 4.99109 18.2388 4.99109 19.792 5.41471ZM15.1836 12.0001L9.99743 15.0039V8.99623L15.1836 12.0001Z" fill="black"></path>
+                        </svg></a><a class="btn btn-light p-2 p-md-3 rounded-circle me-1" href="" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18.3372 18.339H15.6717V14.1622C15.6717 13.1662 15.6515 11.8845 14.2827 11.8845C12.893 11.8845 12.6807 12.9683 12.6807 14.0887V18.339H10.0152V9.75H12.5757V10.9207H12.6102C12.968 10.2457 13.838 9.53325 15.1377 9.53325C17.8385 9.53325 18.338 11.3108 18.338 13.6245L18.3372 18.339ZM7.0047 8.57475C6.1467 8.57475 5.45745 7.88025 5.45745 7.026C5.45745 6.1725 6.14745 5.47875 7.0047 5.47875C7.8597 5.47875 8.5527 6.1725 8.5527 7.026C8.5527 7.88025 7.85895 8.57475 7.0047 8.57475ZM8.3412 18.339H5.6682V9.75H8.3412V18.339ZM19.6707 3H4.3302C3.59595 3 3.00195 3.5805 3.00195 4.29675V19.7033C3.00195 20.4202 3.59595 21 4.3302 21H19.6685C20.402 21 21.002 20.4202 21.002 19.7033V4.29675C21.002 3.5805 20.402 3 19.6685 3H19.6707Z" fill="black"></path>
+                        </svg></a><a class="btn btn-light p-2 p-md-3 rounded-circle me-1" href="" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.3727 2.09442C8.4261 1.41268 3.73481 4.48505 2.38162 9.29256C1.02843 14.1001 3.42809 19.1692 8.00369 21.1689C7.94362 20.4008 7.99833 19.628 8.166 18.8761C8.35062 18.0374 9.46219 13.4132 9.46219 13.4132C9.24069 12.9173 9.12991 12.379 9.13757 11.8359C9.13757 10.3509 9.99451 9.24295 11.0607 9.24295C11.4482 9.23718 11.8191 9.40028 12.0768 9.68981C12.3345 9.97934 12.4536 10.3667 12.403 10.751C12.403 11.6512 11.8246 13.0131 11.5238 14.2903C11.4024 14.7656 11.5141 15.2703 11.8247 15.65C12.1353 16.0296 12.6079 16.2389 13.0977 16.2139C14.9954 16.2139 16.2685 13.7825 16.2685 10.9126C16.2685 8.71205 14.8108 7.0655 12.1253 7.0655C10.827 7.01531 9.56486 7.4996 8.6332 8.40543C7.70154 9.31126 7.18182 10.5595 7.19521 11.859C7.1666 12.5722 7.39664 13.2717 7.84292 13.8287C8.01459 13.9564 8.08082 14.1825 8.00522 14.3827C7.95907 14.5673 7.84292 15.0059 7.79676 15.1675C7.7773 15.278 7.70657 15.3728 7.60614 15.4228C7.50571 15.4729 7.38749 15.4724 7.28752 15.4214C5.90288 14.8674 5.25055 13.3439 5.25055 11.6051C5.25055 8.75822 7.63522 5.3497 12.4046 5.3497C16.2008 5.3497 18.724 8.1273 18.724 11.0972C18.724 15.0059 16.5478 17.9451 13.3308 17.9451C12.3536 17.9761 11.4283 17.5061 10.8769 16.6986C10.8769 16.6986 10.2984 19.0146 10.1845 19.4531C9.95199 20.2099 9.60876 20.9281 9.16602 21.5844C10.0887 21.8643 11.0481 22.0044 12.0123 22C14.6646 22.0017 17.2088 20.9484 19.0839 19.072C20.959 17.1957 22.0109 14.6504 22.0079 11.9975C22.005 7.00306 18.3193 2.77616 13.3727 2.09442Z" fill="black"></path>
+                        </svg></a></nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-6 mb-lg-9">
+    <div class="container">
+      <div class="book-content">
+        <p>Braided wigs have become a significant trend in the world of hairstyling, offering both versatility and convenience</p>
+        <p>Braided wigs have become a significant trend in the world of hairstyling, offering both versatility and convenience. These wigs allow people to enjoy the beauty of intricate braids without spending hours at the salon or worrying about the health of their natural hair. As fashion trends evolve, braided wigs have adapted to meet the needs of a diverse audience, from those seeking protective styles to fashion enthusiasts looking to make a bold statement. This blog explores the current trends in length and style for braided wigs, highlighting the popular wig styles that have captivated the beauty industry.</p><br>
+        <h3>The Rise of Braided Wigs</h3><br>
+        <p>Braided wigs have surged in popularity due to their practicality and <a href="">aesthetic appeal</a>. Originally, wigs were seen as a solution for hair loss or thinning, but today, they are a fashion statement in their own right. With the busy lives that many people lead, spending hours in a stylist’s chair for traditional braids can be challenging. Braided wigs offer a quick and effective alternative, allowing people to change their look in minutes. These wigs are crafted to mimic natural braids, giving the appearance of freshly done hair without the time commitment.</p>
+        <p>The versatility of braided wigs also plays a role in their popularity. Whether you prefer short, long, or medium-length hair, there is a braided wig that suits your preference. Moreover, these wigs come in a variety of braid styles, from box braids to cornrows, catering to different tastes and cultural expressions.</p><br>
+        <h3>Popular Wig Styles in Braided Wigs</h3><br>
+        <p>When it comes to braided wigs, there is a wide array of styles to choose from. Among the most popular wig styles are box braids, which have a timeless appeal. These wigs are designed to replicate the look of traditional box braids, characterized by their square-shaped sections and neat, uniform braids. Box braid wigs are favored for their versatility; they can be worn in various lengths, from short to waist-length, depending on personal preference.</p>
+        <p>Another popular style is the cornrow wig, which mimics the look of intricately braided cornrows that lay flat against the scalp. These wigs are ideal for those who prefer a more understated look, as they tend to be less voluminous than box braid wigs. Cornrow wigs can also be styled in different patterns, adding a unique touch to the overall appearance.</p>
+        <p>For those who love a bold, statement-making look, Ghana braids are an excellent choice. These wigs feature thick, pronounced braids that are often styled in elaborate patterns or updos. Ghana braided wigs are perfect for special occasions or when you want to stand out from the crowd.</p><br>
+        <h3>Trends in Braided Wig Length</h3><br>
+        <p>Length is a key factor in choosing the right braided wig, as it significantly impacts the overall style and appearance. The current trend in braided wig length is leaning towards the extremes—either very long or very short. Long braided wigs, often extending to the waist or beyond, are popular for their dramatic effect. These wigs create a striking look and offer the flexibility to style the braids in various ways, such as high ponytails, buns, or elaborate updos.</p>
+        <p>On the other hand, short braided wigs are gaining traction among those who prefer a more manageable and casual look. These wigs usually fall just above the shoulders and are ideal for everyday wear. Short braided wigs are easy to maintain and offer a chic, modern appearance without the weight and length of longer wigs.</p>
+        <p>Medium-length braided wigs remain a classic choice for those who want a balanced look. These wigs offer the best of both worlds—long enough to style in different ways but short enough to be practical for daily wear. Medium-length wigs are particularly popular for those new to wearing braided wigs, as they offer versatility without being overwhelming.</p><br>
+        <h3>Color Trends in Braided Wigs</h3><br>
+        <p>In addition to length, color plays a significant role in braided wig trends. While traditional black or brown braided wigs remain popular for their natural appearance, bold colors are making a splash in the market. Blonde braided wigs, for instance, are a top choice for those looking to brighten their look without committing to permanent hair dye.</p>
+        <p>Ombre and highlighted braided wigs are also trending, offering a more subtle way to incorporate color. These wigs feature a gradual transition from one color to another, creating a dynamic and eye-catching effect. For the more adventurous, wigs in vibrant colors like red, blue, or purple are available, allowing wearers to express their unique style.</p>
+        <p>Natural-looking colors such as honey blonde, auburn, and chestnut are popular for those who prefer a warm, sun-kissed appearance. These shades complement various skin tones and add a touch of sophistication to the overall look. The growing trend towards more natural and subtle colors reflects a shift in the market towards versatility and personalization.</p><br>
+        <h3>The Influence of Celebrity Culture on Braided Wigs</h3><br>
+        <p>Celebrity culture has always had a significant impact on fashion trends, and braided wigs are no exception. Many celebrities have embraced braided wigs, showcasing them at red-carpet events, music videos, and on social media. This has fueled the demand for braided wigs, with fans eager to replicate the looks of their favorite stars.</p>
+        <p>The influence of celebrities has also led to the popularization of certain wig styles and colors. For example, the popularity of blonde and platinum braided wigs can be attributed to their frequent appearance in celebrity fashion. Similarly, the rise of extra-long braided wigs can be linked to their use by high-profile figures in the entertainment industry.</p>
+        <p>Celebrities have also helped to normalize the use of wigs in everyday life, making them a fashionable and acceptable choice for all occasions. This has contributed to the growth of the braided wig market, as more people feel confident and empowered to experiment with different wig styles and lengths.</p><br>
+        <h3>Care and Maintenance of Braided Wigs</h3><br>
+        <p>While braided wigs offer convenience and style, proper care and maintenance are essential to keep them popular wig styles. Regular cleaning is crucial to prevent the buildup of dirt and oils, which can affect the appearance and longevity of the wig. Most braided wigs can be gently washed with a mild shampoo and cold water, then air-dried to maintain their shape and texture.</p>
+        <p>In addition to washing, proper storage is important to prevent tangling and damage. When not in use, braided wigs should be stored on a wig stand or in a silk bag to keep the braids neat and free from dust. It&apos;s also advisable to avoid excessive styling or the use of heat tools, as these can cause the fibers to fray or weaken.</p>
+        <p>Applying a light oil or wig conditioner can help keep the braids smooth and shiny. However, it&apos;s important not to overdo it, as too much product can weigh down the wig and make it look greasy. With the right care, a braided wig can last for many months, providing a long-lasting and stylish solution for those looking to switch up their hairstyle.</p>
+        <p>Conclusion</p>
+        <p>Braided wigs are a versatile and stylish option for anyone looking to experiment with different looks without the commitment of traditional braiding. From short, chic styles to long, dramatic braids, the options are endless. As trends continue to evolve, braided wigs remain a popular choice in the world of hairstyling, offering a blend of convenience, protection, and fashion. Whether you’re drawn to natural colors or bold, statement-making shades, there’s a braided wig out there to suit every taste. Embrace the trend and discover the endless possibilities that braided wigs have to offer!</p><br>
+        <p>© Copyright 2024 Thando1111. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <h3 class="mb-4 mb-5 text-center text-sm-start">Recent Comment</h3>
+      <div class="row align-items-center justify-content-center justify-content-sm-between gy-3 mb-4 mb-lg-5">
+        <div class="col-12 col-sm-auto text-center">
+          <div class="rating d-inline-flex me-3 align-self-center" style="--star-rating: 4;"></div>
+          <div class="text-secondary d-inline-flex">24 total Reviews</div>
+        </div>
+        <div class="col-12 col-sm-auto text-center"><button class="btn btn-outline-primary" type="button">Write review</button></div>
+      </div>
+      <div class="reviews">
+        <hr class="my-lg-5">
+        <div class="text-secondary review">
+          <div class="row gx-3 mb-3">
+            <div class="col-auto"><img class="rounded-circle" src="./images/dist/review-ava-1.jpg" alt=""></div>
+            <div class="col-auto"><span class="h5 text-black me-1">Jaxson Aminoff</span><span>Jan 12, 2024</span>
+              <div class="rating mt-2" style="--star-rating: 5;"></div>
+            </div>
+          </div>
+          <div>
+            <p>I would like to join in next. If chosen, I would like to suggest _your_ short story (lol) &quot;The Secret Lives of Strangers&quot; for inspiration (https://www.booksie.com/467912-the-secret-lives-of-strangers)</p>
+            <p>I&apos;d like to write my entry as part of that story&apos;s miniverse. I realize this may be slightly outside the above &quot;prompting&quot; rules, but please accommodate as possible. As per my comment in your story&apos;s page, you already know I had intended to do a follow up piece on Secret Lives. I had a different idea for the style I’d employ. I am more into what I call &quot;structure-less rambling&quot; which is a style inspired on James Joyce&apos;s and Julio Cortazar&apos;s &quot;stream of consciousness&quot; literary styles (tho significantly less polished than theirs, lol). Anyway, regardless of style, this is a good opportunity to deliver on my intent to write on your enticing miniverse.</p>
+            <p>There is, of course, a wrinkle: Your rules say (if chosen) the next contest entry must follow my style. However, I have not published anything on Booksie, yet. Let&apos;s do this: if I&apos;m chosen, the next entry should impersonate James Joyce&apos;s writing style in the short story &quot;Eveline&quot; (published in his &quot;Dubliners&quot; collection of shorts and easily accessible from your local library or $0.99 on Kindle). In spite of that big name, the style isn&apos;t intimidating at all. Quite the opposite, it&apos;s refreshingly simple and filled with one-liners and first person narrative.</p>
+            <p>An alternative would be for me to pick a booksie entry in my stead. But the booksie/style I&apos;d pick in that case is a difficult style to follow. She&apos;s a brave writer, unafraid to take her story to depths I suspect not too many would follow and that courage is very much part of her style, IMO. Lastly, I should add that circumventing rules isn’t my thing (as chaos could ensue if each person picks which rules to ignore), but I see this as the best way for me to participate and keep the contest going. Let me know what you decide.</p>
+          </div>
+        </div>
+        <hr class="my-lg-5">
+        <div class="text-secondary review">
+          <div class="row gx-3 mb-3">
+            <div class="col-auto"><img class="rounded-circle" src="./images/dist/review-ava-2.jpg" alt=""></div>
+            <div class="col-auto"><span class="h5 text-black me-1">James Schleifer</span><span>Jan 12, 2024</span>
+              <div class="rating mt-2" style="--star-rating: 4.7;"></div>
+            </div>
+          </div>
+          <div>
+            <p>Let&apos;s do it - pleased to have you kick off the challenge! A few things:</p>
+            <p>We can leave a choice up to the next participant, to either portray the writing style of said Booksie author (message me with a link to her profile please, and just be sure that she is aware of the challenge, too!) or James Joyce. I would prefer to keep this circulating within Booksie, as the purpose it to familiarize with one another and provide users an opportunity to read and get read - but no hard feelings if the next person interested chooses the latter as their challenge.</p>
+            <p>Side note here, on how much I admire your consistent promotion of other authors, both beginners and seasoned! That is part of what makes a person a wonderful addition to any writing community! Support!</p>
+            <p>Also, I am very honored you&apos;ve chosen one of my stories! Let&apos;s be honest here - I secretly wished I could have named myself as the first to be &quot;impersonated&quot; and kick off the challenge... but it seemed very vain and too suggestive. My ego is gleaming right now. Lol!</p>
+            <p>Go ahead with your idea. Although it is strongly encouraged as part of the ITSOWC to imitate your &quot;theme-author&quot; as closely as possible, this is, after all, just a challenge and some rules are going to be bent in every entry! In contrast to those of a contest, the rules here are much less concrete. It&apos;d be interesting to see in which ways each participant decides to mirror their &quot;theme-author&quot; (I think I&apos;m making that the official term by use? Lol) and interpret their style. Perhaps it&apos;s not in the structure - as you said, you are more into &quot;structure-less rambling&quot; - but in the way that characters think, behave, connect, or are introduced, or the themes and so on.</p>
+            <p>Excited to see what you come up with and how &quot;the Secret Lives of Strangers&quot; has inspired you! I&apos;m so eager to read your &quot;spin-off&quot;! Remember, there is no time limit here. Take all that you need. (This challenge will be a lengthy, but worthwhile, one all the way through I think!) :-)</p>
+          </div>
+        </div>
+        <hr class="my-lg-5">
+        <div class="text-secondary review">
+          <div class="row gx-3 mb-3">
+            <div class="col-auto"><img class="rounded-circle" src="./images/dist/review-ava-3.jpg" alt=""></div>
+            <div class="col-auto"><span class="h5 text-black me-1">Miracle Geidt</span><span>Jan 12, 2024</span>
+              <div class="rating mt-2" style="--star-rating: 5;"></div>
+            </div>
+          </div>
+          <div>
+            <p>Rae, this sounds like an awesome idea, except that I&apos;m either too stupid or haven&apos;t had enough sleep (probably both!) to understand the rules :-/</p>
+            <p>What do I say here? Do I choose an author I want to impersonate, or do I suggest myself as an author to be impersonated?</p>
+          </div>
+        </div>
+        <hr class="my-lg-5">
+      </div>
+      <div class="text-center mt-lg-6 mt-4"><button class="btn btn-outline-primary" id="reviews-load-more-btn">Load More</button>
+        <script>
+          let button = document.querySelector('#reviews-load-more-btn')
+          button.addEventListener('click', function() {
+            ///
+          })
+        </script>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white py-6 py-lg-9">
+    <div class="container">
+      <div class="row g-3 justify-content-xl-between">
+        <div class="col-12 col-md-6 col-lg-3">
+          <p class="text-center text-md-start mb-5 mb-lg-6"><a class="navbar-brand" href="./index.html"><img src="img/logo-footer.svg" alt=""></a></p>
+          <p class="text-center text-md-start">BOOKSIE © 2024 | All rights reserved. Terms under which this service is provided to you. Privacy Policy.</p>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Read Houses</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Members</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Tags</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Writing Resources</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Top 100 Love Poems</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Help Guide</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Publishing Advisor</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3">
+          <div class="row g-3">
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_440_1615)"></g>
+                    <path d="M19.9974 13.3334V28L13.3307 24L6.66406 28V13.3334C6.66406 12.2725 7.08549 11.2551 7.83564 10.5049C8.58578 9.7548 9.6032 9.33337 10.6641 9.33337H15.9974C17.0583 9.33337 18.0757 9.7548 18.8258 10.5049C19.576 11.2551 19.9974 12.2725 19.9974 13.3334Z" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.6641 4H21.3307C22.3916 4 23.409 4.42143 24.1592 5.17157C24.9093 5.92172 25.3307 6.93913 25.3307 8V22.6667" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <defs>
+                      <clippath id="clip0_440_1615"></clippath>
+                      <rect width="32" height="32" fill="white"></rect>
+                    </defs>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Booksie Limited Editions</p>
+                </div>
+              </a></div>
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8.05601C13.8021 6.08449 10.9525 4.99594 8 5.00001C6.59733 5.00001 5.25067 5.24001 4 5.68268V24.6827C5.28483 24.2294 6.63755 23.9985 8 24C11.0733 24 13.8773 25.156 16 27.056M16 8.05601C18.1978 6.08438 21.0474 4.99581 24 5.00001C25.4027 5.00001 26.7493 5.24001 28 5.68268V24.6827C26.7152 24.2294 25.3624 23.9985 24 24C21.0475 23.9959 18.1979 25.0845 16 27.056M16 8.05601V27.056" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Promote Your Published Book</p>
+                </div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+mixin contest-winners-card(href, src, label, title, author)
+    a.card.border-0.h-100(href=href)
+        div(class=label)
+        img.card-img-top.card-img-bottom(src=src, alt="")
+        .card-body.text-center.px-0.pb-0
+            h6.card-title= title
+            p.card-text.text-secondary.text-uppercase.small= author

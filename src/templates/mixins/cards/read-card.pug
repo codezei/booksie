@@ -1,0 +1,24 @@
+mixin read-card(title, author, src, tags, date, stats, text, link)
+    .card.border-0.h-100.small
+        .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 380px")
+            h6.text-center.card-title= title
+            p.text-secondary.text-uppercase.text-center by 
+                u= author
+            div.position-relative.flex-fill.mb-3
+                img.card-img.position-absolute.h-100.w-auto.translate-middle.top-50.start-50(src=src, alt="")
+            .text-center.small
+                each tag in tags
+                    span.badge.m-1.fw-medium.p-2.text-uppercase(class="bg-" + tag.type + (tag.type === "warning" ? " text-dark" : ""))= tag.name
+        .card-body.px-0.pb-0
+            p.text-secondary= date
+            .row.g-1.justify-content-between.mb-3
+                each stat in stats
+                    .col-6
+                        i.icon(class="icon-" + stat.name.toLowerCase())
+                        |&nbsp;
+                        span= stat.name
+                        |&nbsp;
+                        span= stat.value
+            p.text-secondary.card-text= text
+        .card-footer.border-0.px-0.pb-0
+            a.card-link.fw-medium(href=link.href)= link.text

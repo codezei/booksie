@@ -1,0 +1,18 @@
+include ../../mixins/cards/book-card
+include ../../mixins/slider-navigation
+
+.swiper.boosted-premium-swiper
+    .swiper-wrapper
+        .swiper-slide
+            +book-card("#", "img/boosted-content-img-1.jpg", "Monarch", "by Cobber")
+        .swiper-slide
+            +book-card("#", "img/boosted-content-img-2.jpg", "Where Dragons Rule: Dissent (Old Ver)", "by Sonny Dae")
+        .swiper-slide
+            +book-card("#", "img/boosted-content-img-3.jpg", "Choose Your Seaside Adventure", "by toadstoolwoods")
+        .swiper-slide
+            +book-card("#", "img/boosted-content-img-4.jpg", "The Divine Diamond Highway", "by Thomas LaHomme")
+        .swiper-slide
+            +book-card("#", "img/boosted-content-img-5.jpg", "The Rockstar - Beginnings", "by RoyBoy")
+        .swiper-slide
+            +book-card("#", "img/boosted-content-img-6.jpg", "The Rockstar - Beginnings", "by RoyBoy")
++slider-navigation("boosted-premium")

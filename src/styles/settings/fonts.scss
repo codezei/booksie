@@ -1,0 +1,22 @@
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+      font-family: $fname;
+      font-style: $fstyle;
+      font-weight: $fweight;
+      src: url($furl) format('woff2');
+  }
+}
+
+@include font('Neue Montreal', normal, 300, '../fonts/NeueMontreal-Light.woff2');
+@include font('Neue Montreal', italic, 300, '../fonts/NeueMontreal-LightItalic.woff2');
+
+@include font('Neue Montreal', normal, 400, '../fonts/NeueMontreal-Regular.woff2');
+@include font('Neue Montreal', italic, 400, '../fonts/NeueMontreal-Italic.woff2');
+
+@include font('Neue Montreal', normal, 500, '../fonts/NeueMontreal-Medium.woff2');
+@include font('Neue Montreal', italic, 500, '../fonts/NeueMontreal-MediumItalic.woff2');
+
+@include font('Neue Montreal', normal, 700, '../fonts/NeueMontreal-Bold.woff2');
+@include font('Neue Montreal', italic, 700, '../fonts/NeueMontreal-BoldItalic.woff2');

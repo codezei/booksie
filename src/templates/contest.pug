@@ -1,0 +1,16 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Contest";
+
+append head
+
+append content
+  include components/header
+  include components/contest/intro
+  include components/contest/writing-contest
+
+append scripts

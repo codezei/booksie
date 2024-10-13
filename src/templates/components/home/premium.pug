@@ -1,0 +1,46 @@
+include ../../mixins/section
+include ../../mixins/section-title
+
++section 
+    +section-title("Features Premium Members")
+    #pills-tab.row.justify-content-center.mb-5(role="tablist")
+        .col-auto
+            button#pills-ebooks-tab.btn.btn-outline-primary.active(
+                data-bs-toggle="pill", 
+                data-bs-target="#pills-ebooks", 
+                type="button", 
+                role="tab", 
+                aria-controls="pills-ebooks", 
+                aria-selected="true"
+                ) eBooks
+        .col-auto
+            button#pills-short-stories-tab.btn.btn-outline-primary(
+                data-bs-toggle="pill", 
+                data-bs-target="#pills-short-stories", 
+                type="button", 
+                role="tab", 
+                aria-controls="pills-short-stories", 
+                aria-selected="false"
+                ) Short Stories
+        .col-auto
+            button#pills-poems-tab.btn.btn-outline-primary(
+                data-bs-toggle="pill", 
+                data-bs-target="#pills-poems", 
+                type="button", 
+                role="tab", 
+                aria-controls="pills-poems", 
+                aria-selected="false"
+                ) Poems
+    #pills-tabContent.tab-content
+        #pills-ebooks.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-ebooks-tab")
+            include ../sliders/ebooks-slider
+            .text-center.mt-5
+                a.btn.btn-outline-primary(href="") Read More eBooks
+        #pills-short-stories.tab-pane.fade(role="tabpanel", aria-labelledby="pills-short-stories-tab")
+            include ../sliders/short-stories-slider
+            .text-center.mt-5
+                a.btn.btn-outline-primary(href="") Read More Short Stories
+        #pills-poems.tab-pane.fade(role="tabpanel", aria-labelledby="pills-poems-tab")
+            include ../sliders/poems-slider
+            .text-center.mt-5
+                a.btn.btn-outline-primary(href="") Read More Poems

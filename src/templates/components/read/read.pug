@@ -1,0 +1,323 @@
+include ../../mixins/breadcrumbs
+include ../../mixins/form-check
+include ../../mixins/cards/read-card
+
+section.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Writing Contests")
+        h2.text-center.mb-4.mb-md-6.text-md-start Find something great to Read
+        .row.g-3.justify-content-between.mb-2.mb-sm-4.mb-lg-6
+            .col-12.col-sm-6.col-md-5
+                form(method="GET")
+                    .input-group
+                        input.form-control(type="text", placeholder="Find a Publishing House", name="search")
+                        span.input-group-text
+                            svg.bi.bi-search(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="currentColor", viewBox="0 0 16 16")
+                                path(d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0")
+            .col-12.col-sm-6.col-md-5
+                form(method="GET")
+                    select.form-select(aria-label="Order by", name="ordered")
+                        option(selected) Order by
+                        option(value="1") One
+                        option(value="2") Two
+                        option(value="3") Three
+            .col-12
+                .row.g-3
+                    .col-12.col-md-3.col-xl-3.col-xxl-2
+                        button.btn.btn-dark.w-100.mb-3.d-md-none(type="button", data-bs-toggle="collapse", data-bs-target=".collapse-filter", aria-expanded="false", aria-controls="collapseExample")
+                            | Filter
+                        .collapse.d-md-block.collapse-filter
+                            .small Found 4000 results
+                            a.text-danger.small(href="") Clear all
+                            hr
+                            #accordion-filter.accordion.accordion-flush
+                                .accordion-item
+                                    h2#flush-heading-genres.accordion-header
+                                        .accordion-button.collapsed(data-bs-toggle="collapse", data-bs-target="#flush-genres", aria-expanded="false", aria-controls="flush-genres")
+                                            span.small.text-uppercase Genres
+                                    #flush-genres.accordion-collapse.collapse(aria-labelledby="flush-heading-genres", data-bs-parent="#accordion-filter")
+                                        .accordion-body
+                                            form#form-filter-genres(method="GET")
+                                                +form-check("action-and-adventure", "Action and Adventure", true)
+                                                +form-check("children-stories", "Children Stories")
+                                                +form-check("commercial-fiction", "Commercial Fiction")
+                                                +form-check("editorial-and-opinion", "Editorial and Opinion")
+                                                +form-check("fan-fiction", "Fan Fiction")
+                                                +form-check("fantasy", "Fantasy")
+                                                +form-check("flash-fiction", "Flash Fiction")
+                                                +form-check("gay-and-lesbian", "Gay and Lesbian")
+                                                +form-check("health-and-fitness", "Health and Fitness")
+                                                +form-check("historical-fiction", "Historical Fiction")
+                                                +form-check("horror", "Horror")
+                                                +form-check("humor", "Humor")
+                                                +form-check("jokes", "Jokes")
+                                                +form-check("literary-fiction", "Literary Fiction")
+                                                +form-check("mystery-and-crime", "Mystery and Crime")
+                                                +form-check("non-fiction", "Non-Fiction")
+                                                +form-check("other", "Other")
+                                                +form-check("personal-finance", "Personal Finance")
+                                                +form-check("poetry", "Poetry")
+                                                +form-check("religion-and-spirituality", "Religion and Spirituality")
+                                                +form-check("riddles", "Riddles")
+                                                +form-check("romance", "Romance")
+                                                +form-check("science-fiction", "Science Fiction")
+                                                +form-check("song-lyrics", "Song Lyrics")
+                                                +form-check("sports", "Sports")
+                                                +form-check("thrillers", "Thrillers")
+                                                +form-check("travel", "Travel")
+                                                +form-check("true-confessions", "True Confessions")
+                                                +form-check("war-and-military", "War and Military")
+                                                +form-check("westerns", "Westerns")
+                                                +form-check("young-adult", "Young Adult")
+                                            script.
+                                                const formFilterGenres = document.querySelector('#form-filter-genres')
+                                                formFilterGenres.addEventListener('change', function (e) {
+                                                //...
+                                                })
+                                .accordion-item
+                                    h2#flush-heading-type.accordion-header
+                                        .accordion-button.collapsed(data-bs-toggle="collapse", data-bs-target="#flush-type", aria-expanded="false", aria-controls="flush-type")
+                                            span.small.text-uppercase Types
+                                    #flush-type.accordion-collapse.collapse(aria-labelledby="flush-heading-type", data-bs-parent="#accordion-filter")
+                                        .accordion-body
+                                            form#form-filter-type(method="GET")
+                                                +form-check("book", "Book")
+                                                +form-check("short-story", "Short Story")
+                                                +form-check("poem", "Poem")
+                                                +form-check("script", "Script")
+                                                +form-check("essay", "Essay")
+                                                +form-check("article", "Article")
+                                                +form-check("book-review", "Book Review")
+                                                +form-check("business-writing", "Business Writing")
+                                                +form-check("miscellaneous", "Miscellaneous")
+                                                +form-check("writing-contest", "Writing Contest")
+                                                +form-check("guide", "Guide")
+                                                +form-check("humor", "Humor")
+                                            script.
+                                                const formFilterType = document.querySelector('#form-filter-type')
+                                                formFilterGenres.addEventListener('change', function (e) {
+                                                //...
+                                                })
+                                .accordion-item
+                                    h2#flush-heading-language.accordion-header
+                                        .accordion-button.collapsed(data-bs-toggle="collapse", data-bs-target="#flush-language", aria-expanded="false", aria-controls="flush-language")
+                                            span.small.text-uppercase Languages
+                                    #flush-language.accordion-collapse.collapse(aria-labelledby="flush-heading-language", data-bs-parent="#accordion-filter")
+                                        .accordion-body
+                                            form#form-filter-language(method="GET")
+                                                +form-check("english", "English")
+                                                +form-check("french", "French")
+                                                +form-check("german", "German")
+                                                +form-check("italian", "Italian")
+                                                +form-check("portuguese", "Portuguese")
+                                            script.
+                                                const formFilterLanguages = document.querySelector('#form-filter-language')
+                                                formFilterGenres.addEventListener('change', function (e) {
+                                                //...
+                                                })
+                    .col-12.col-md-9.col-xl-9.col-xxl-10
+                        .collapse.d-md-block.collapse-filter
+                            ul#pills-tab.nav.nav-pills.mb-3.nav-fill(role="tablist")
+                                li.nav-item.m-1(role="presentation")
+                                    button#pills-new-tab.btn.btn-outline-primary.w-100.active(data-bs-toggle="pill", data-bs-target="#pills-new", type="button", role="tab", aria-controls="pills-new", aria-selected="true")
+                                        | New
+                                li.nav-item.m-1(role="presentation")
+                                    button#pills-popular-shelves-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-popular-shelves", type="button", role="tab", aria-controls="pills-popular-shelves", aria-selected="false")
+                                        | Popular Shelves
+                                li.nav-item.m-1(role="presentation")
+                                    button#pills-popular-reads-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-popular-reads", type="button", role="tab", aria-controls="pills-popular-reads", aria-selected="false")
+                                        | Popular Reads
+                                li.nav-item.m-1(role="presentation")
+                                    button#pills-contest-winners-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-contest-winners", type="button", role="tab", aria-controls="pills-contest-winners", aria-selected="false")
+                                        | Contest Winners
+                                li.nav-item.m-1(role="presentation")
+                                    button#pills-audio-books-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-audio-books", type="button", role="tab", aria-controls="pills-audio-books", aria-selected="false")
+                                        | Audio Books
+                        #pills-tabContent.tab-content
+                            #pills-new.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-new-tab")
+                                .row.gy-3
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Braided Wigs: Trends in Length and Style",
+                                            "CelestialDuck",
+                                            "img/read-book-1.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Fantasy"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
+                                            {href: "#", text: "Read more"}
+                                            )
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Chrysalis Days & Butterfly Nights",
+                                            "JanKarlsson",
+                                            "img/read-book-2.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Literary Fiction"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Braided Wigs: Trends in Length and Style",
+                                            "h j furl",
+                                            "img/read-book-3.jpg",
+                                            [{type: "primary", name: "Short Story"},{type: "warning", name: "True Confessions"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Pappus and Sonder: The Screenplay",
+                                            "SLK",
+                                            "img/read-book-4.jpg",
+                                            [{type: "primary", name: "Short Story"},{type: "warning", name: "True Confessions"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+                            #pills-popular-shelves.tab-pane.fade(role="tabpanel", aria-labelledby="pills-popular-shelves-tab")
+                                .row.gy-3
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Braided Wigs: Trends in Length and Style",
+                                            "CelestialDuck",
+                                            "img/read-book-1.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Fantasy"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
+                                            {href: "#", text: "Read more"}
+                                            )
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Chrysalis Days & Butterfly Nights",
+                                            "JanKarlsson",
+                                            "img/read-book-2.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Literary Fiction"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Braided Wigs: Trends in Length and Style",
+                                            "h j furl",
+                                            "img/read-book-3.jpg",
+                                            [{type: "primary", name: "Short Story"},{type: "warning", name: "True Confessions"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+                            #pills-popular-reads.tab-pane.fade(role="tabpanel", aria-labelledby="pills-popular-reads-tab")
+                                .row.gy-3
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Braided Wigs: Trends in Length and Style",
+                                            "CelestialDuck",
+                                            "img/read-book-1.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Fantasy"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
+                                            {href: "#", text: "Read more"}
+                                            )
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Chrysalis Days & Butterfly Nights",
+                                            "JanKarlsson",
+                                            "img/read-book-2.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Literary Fiction"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+                            #pills-contest-winners.tab-pane.fade(role="tabpanel", aria-labelledby="pills-contest-winners-tab")
+                                .row.gy-3
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Braided Wigs: Trends in Length and Style",
+                                            "CelestialDuck",
+                                            "img/read-book-1.jpg",
+                                            [{type: "primary", name: "Book"},{type: "warning", name: "Fantasy"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
+                                            {href: "#", text: "Read more"}
+                                            )
+                            #pills-audio-books.tab-pane.fade(role="tabpanel", aria-labelledby="pills-audio-books-tab")
+                                .row.gy-3
+                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                        +read-card(
+                                            "Pappus and Sonder: The Screenplay",
+                                            "SLK",
+                                            "img/read-book-4.jpg",
+                                            [{type: "primary", name: "Short Story"},{type: "warning", name: "True Confessions"}],
+                                            "September 05, 2024",
+                                            [
+                                                {name: "Reads", value: "1734"}, 
+                                                {name: "Comments", value: "512"}, 
+                                                {name: "Shelves", value: "2"}, 
+                                                {name: "Likes", value: "421"}
+                                            ],
+                                            "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
+                                            {href: "#", text: "Read more"}
+                                            )
+        include ../pagination
