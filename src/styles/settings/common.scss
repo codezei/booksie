@@ -25,12 +25,48 @@ img {
   height: auto;
 }
 .dark-bg {
-  background: $primary;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3C!-- Верхняя линия --%3E%3Cline x1='0' y1='0' x2='150' y2='0' stroke='white' stroke-width='2' stroke-opacity='0.1'/%3E%3C!-- Правая линия --%3E%3Cline x1='150' y1='0' x2='150' y2='150' stroke='white' stroke-width='1' stroke-opacity='0.05'/%3E%3C/svg%3E"), linear-gradient(45deg, $primary 0%, $dark 40%, $dark 60%, $primary 100%);
+  background-color: #093885;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3C!-- Верхняя линия --%3E%3Cline x1='0' y1='0' x2='150' y2='0' stroke='white' stroke-width='2' stroke-opacity='0.1'/%3E%3C!-- Правая линия --%3E%3Cline x1='150' y1='0' x2='150' y2='150' stroke='white' stroke-width='1' stroke-opacity='0.05'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-position: center;
-  background-size: 100px 100px, auto;
+  background-size: 150px 150px;
   color: #fff;
+  position: relative;
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 629px;
+    height: 629px;
+    position: absolute;
+    background-color: #000;
+    filter: blur(250px);
+    border-radius: 50%;
+    z-index: 1;
+    left: 20%;
+    top: -20%;
+    pointer-events: none;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 850px;
+    height: 629px;
+    position: absolute;
+    background-color: #000;
+    filter: blur(250px);
+    border-radius: 50%;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, 50%);
+    pointer-events: none;
+  }
+
 }
 
 a.card:not(:hover) {
