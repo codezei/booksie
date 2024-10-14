@@ -7337,7 +7337,99 @@
         }
       }
     });
+    dragAndDrop();
   });
+
+  function dragAndDrop() {
+    var dropArea = document.getElementById('drop-area');
+    var input = document.getElementById('book-image');
+    var previewImageContainer = document.getElementById('preview-image-container');
+    var previewRemoveImage = document.getElementById('preview-remove-image');
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
+      dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(function (eventName) {
+      dropArea.addEventListener(eventName, function () {
+        return dropArea.classList.add('highlight');
+      }, false);
+    });
+    ['dragleave', 'drop'].forEach(function (eventName) {
+      dropArea.addEventListener(eventName, function () {
+        return dropArea.classList.remove('highlight');
+      }, false);
+    });
+    dropArea.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+      var dt = e.dataTransfer;
+      var files = dt.files;
+
+      if (files.length) {
+        handleFiles(files);
+      }
+    }
+
+    function handleFiles(files) {
+      var file = files[0];
+
+      if (validateFile(file)) {
+        input.files = files;
+        uploadFile(file);
+        previewFile(file);
+      } else {
+        alert('Please upload a valid file (SVG, PNG, JPG, GIF)');
+      }
+    }
+
+    function validateFile(file) {
+      var allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'];
+
+      if (!allowedTypes.includes(file.type)) {
+        return false;
+      }
+
+      return true;
+    }
+
+    function uploadFile(file) {
+      console.log('Загружен файл:', file);
+    }
+
+    dropArea.addEventListener('click', function () {
+      input.click();
+    });
+    input.addEventListener('change', function () {
+      var files = this.files;
+
+      if (files.length) {
+        handleFiles(files);
+      }
+    });
+
+    function previewFile(file) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        previewImageContainer.innerHTML = '';
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        previewImageContainer.appendChild(img);
+      };
+
+      reader.readAsDataURL(file);
+    }
+
+    previewRemoveImage.addEventListener('click', function () {
+      previewImageContainer.innerHTML = '';
+      input.value = '';
+    });
+  }
 
 }());
 //# sourceMappingURL=main.js.map

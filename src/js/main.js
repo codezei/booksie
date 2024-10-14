@@ -270,4 +270,103 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
+
+
+	dragAndDrop()
 })
+
+
+
+
+function dragAndDrop () {
+    const dropArea = document.getElementById('drop-area');
+    const input = document.getElementById('book-image');
+	const previewImageContainer = document.getElementById('preview-image-container');
+	const previewRemoveImage = document.getElementById('preview-remove-image');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, () => dropArea.classList.add('highlight'), false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, () => dropArea.classList.remove('highlight'), false);
+    });
+
+    dropArea.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+        let dt = e.dataTransfer;
+        let files = dt.files;
+
+        if (files.length) {
+            handleFiles(files);
+        }
+    }
+
+    function handleFiles(files) {
+
+        const file = files[0];
+
+        if (validateFile(file)) {
+            input.files = files;
+            uploadFile(file);
+			previewFile(file);
+        } else {
+            alert('Please upload a valid file (SVG, PNG, JPG, GIF)');
+        }
+    }
+
+    function validateFile(file) {
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/svg+xml'];
+        const maxSize = 800 * 400;
+
+        if (!allowedTypes.includes(file.type)) {
+            return false;
+        } 
+
+        return true;
+    }
+
+    function uploadFile(file) {
+        console.log('Загружен файл:', file);
+    }
+
+    dropArea.addEventListener('click', function () {
+        input.click();
+    });
+
+    input.addEventListener('change', function () {
+        const files = this.files;
+        if (files.length) {
+            handleFiles(files);
+        }
+    });
+
+	function previewFile(file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            previewImageContainer.innerHTML = '';
+
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            previewImageContainer.appendChild(img);
+        };
+
+        reader.readAsDataURL(file);
+    }
+	previewRemoveImage.addEventListener('click', function () {
+		previewImageContainer.innerHTML = ''
+		input.value = ''
+	})
+}
+
+
