@@ -1,0 +1,11 @@
+mixin top-card(src, title, author, text, link)
+    .card.border-0.text-center.h-100
+        .p-3.card-img.d-flex.align-items-center.justify-content-center.bg-light(style="height: 260px;")
+            img.card-img.w-auto(src=src, alt="")
+        .card-body.px-0
+            h6.card-title= title
+            p.card-text.text-secondary.text-uppercase.small.fw-medium Poem By 
+                a(href="#")= author
+            p.card-text.text-secondary.small= text
+        .card-footer.p-0.border-0 
+            a.btn.btn-outline-primary(href=link.href)= link.text 

@@ -1,0 +1,15 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Writing Resources";
+
+append head
+
+append content
+  include components/header
+  include components/top-100/top-100
+
+append scripts
