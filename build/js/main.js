@@ -7338,10 +7338,28 @@
       }
     });
     dragAndDrop();
+    lazyVideo();
   });
+
+  function lazyVideo() {
+    var videoThumbnails = document.querySelectorAll(".video-thumbnail");
+    videoThumbnails.forEach(function (thumbnail) {
+      thumbnail.addEventListener("click", function () {
+        var videoId = this.getAttribute("data-video-id");
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "https://www.youtube.com/embed/".concat(videoId, "?autoplay=1"));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        iframe.classList.add('video-iframe');
+        thumbnail.replaceWith(iframe);
+      });
+    });
+  }
 
   function dragAndDrop() {
     var dropArea = document.getElementById('drop-area');
+    if (!dropArea) return;
     var input = document.getElementById('book-image');
     var previewImageContainer = document.getElementById('preview-image-container');
     var previewRemoveImage = document.getElementById('preview-remove-image');

@@ -273,13 +273,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	dragAndDrop()
+	lazyVideo()
 })
 
 
+function lazyVideo () {
+	const videoThumbnails = document.querySelectorAll(".video-thumbnail");
+
+	videoThumbnails.forEach(thumbnail => {
+	  thumbnail.addEventListener("click", function () {
+		const videoId = this.getAttribute("data-video-id");
+		const iframe = document.createElement("iframe");
+  
+		iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+		iframe.setAttribute("frameborder", "0");
+		iframe.setAttribute("allowfullscreen", "1");
+		iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+		iframe.classList.add('video-iframe')
+		thumbnail.replaceWith(iframe);
+	  });
+	});
+}
 
 
 function dragAndDrop () {
     const dropArea = document.getElementById('drop-area');
+	if (!dropArea) return
     const input = document.getElementById('book-image');
 	const previewImageContainer = document.getElementById('preview-image-container');
 	const previewRemoveImage = document.getElementById('preview-remove-image');

@@ -1,0 +1,32 @@
+.video {
+    &-container {
+        position: relative;
+        width: 100%;
+    }
+
+    &-thumbnail {
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+        color: red;
+        background: transparent;
+    }
+    &-iframe {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}
