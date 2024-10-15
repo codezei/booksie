@@ -294,6 +294,16 @@ a.card:not(:hover) {
   }
 }
 
+.carousel-pagination {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #276CDA;
+  padding: 0;
+  border: none;
+  margin: 0 5px;
+}
+
 section:has(.overflow-swiper) {
   overflow: hidden;
 }
