@@ -1,0 +1,8 @@
+#login-modal.modal.fade(tabindex="-1", aria-labelledby="loginModalLabel", aria-hidden="true")
+    .modal-dialog
+        .modal-content
+            .modal-header.pt-lg-5.px-lg-5.border-0
+                h3#loginModalLabel.modal-title Log in
+                button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            .modal-body.px-lg-5.pb-lg-5
+                include login-form

@@ -1,0 +1,31 @@
+section.mt-4.mb-6.mb-lg-9 
+    .container 
+        .row.justify-content-center 
+            .col-12.col-xl-10.col-xxl-8 
+                h2.text-center.mb-3.mb-lg-4 The Booksie 2024 Short Story Contest
+                p.text-danger.text-center.mb-4.mb-lg-6 Contest Closed
+                //- .dropdown
+                //-     button.btn.btn-secondary.dropdown-toggle(type="button", data-bs-toggle="dropdown", aria-expanded="false")
+                //-         | Dropdown button
+                //-     ul.dropdown-menu.d-sm-flex.border-0.bg-transparent.position-static(role="tablist")
+                //-         li
+                //-             button.btn.btn-outline-primary.active#nav-overview-tab(data-bs-toggle="tab", data-bs-target="#nav-overview", type="button", role="tab", aria-controls="nav-overview", aria-selected="true") Action
+                //-         li
+                //-             button.btn.btn-outline-primary#nav-rules-tab(data-bs-toggle="tab", data-bs-target="#nav-rules", type="button", role="tab", aria-controls="nav-rules", aria-selected="false") Another action
+                //-         li
+                //-             button.btn.btn-outline-primary#nav-entriest-tab(data-bs-toggle="tab", data-bs-target="#nav-entriest", type="button", role="tab", aria-controls="nav-entriest", aria-selected="false") Something else here
+                nav.mb-4.mb-lg-6
+                    #nav-tab.row.justify-content-center.g-2(role="tablist")
+                        .col-auto
+                            button#nav-overview-tab.btn.btn-outline-primary.w-100.active(data-bs-toggle="tab", data-bs-target="#nav-overview", type="button", role="tab", aria-controls="nav-overview", aria-selected="true") Overviews
+                        .col-auto
+                            button#nav-rules-tab.btn.btn-outline-primary.w-100(data-bs-toggle="tab", data-bs-target="#nav-rules", type="button", role="tab", aria-controls="nav-rules", aria-selected="false") Rules
+                        .col-auto
+                            button#nav-entriest-tab.btn.btn-outline-primary.w-100(data-bs-toggle="tab", data-bs-target="#nav-entriest", type="button", role="tab", aria-controls="nav-entriest", aria-selected="false") Entriest
+                #nav-tabContent.tab-content
+                    #nav-overview.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="nav-overview-tab", tabindex="0")
+                        include overview
+                    #nav-rules.tab-pane.fade(role="tabpanel", aria-labelledby="nav-rules-tab", tabindex="0")
+                        include rules
+                    #nav-entriest.tab-pane.fade(role="tabpanel", aria-labelledby="nav-entriest-tab", tabindex="0")
+                        include entriest

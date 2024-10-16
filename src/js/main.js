@@ -270,6 +270,26 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
+	let previousWinners = new Swiper(".previous-winners-swiper", {
+		spaceBetween: 12,
+		slidesPerView: 1.5,
+		navigation: {
+			nextEl: ".previous-winners-button-next",
+			prevEl: ".previous-winners-button-prev",
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				spaceBetween: 24,
+				slidesPerView: 3,
+			}
+		},
+	});
 
 
 	dragAndDrop()

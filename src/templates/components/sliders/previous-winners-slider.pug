@@ -1,0 +1,12 @@
+include ../../mixins/cards/previous-winners-card
+include ../../mixins/slider-navigation
+
+.swiper.previous-winners-swiper 
+    .swiper-wrapper 
+        .swiper-slide
+            +previous-winners-card("img/previous-winners-img-1.jpg", "Out of Print - Grand Prize Winner 2022")
+        .swiper-slide
+            +previous-winners-card("img/previous-winners-img-2.jpg", "The Unexpected - Grand Prizer Winner 2020")
+        .swiper-slide
+            +previous-winners-card("img/previous-winners-img-3.jpg", "Pussy Reaper's Revenge - Grand Prize Winner 2017-2018")
++slider-navigation("previous-winners")

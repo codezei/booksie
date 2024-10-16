@@ -1,0 +1,16 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Short Story Contest";
+
+append head
+
+append content
+  include components/header
+  include components/short-story-contest/short-story-contest
+  include components/reviews
+
+append scripts

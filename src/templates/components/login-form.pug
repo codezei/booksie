@@ -1,0 +1,27 @@
+form()
+    .row.g-3
+        .col-12
+            label(for="email").text-uppercase.small.mb-1 Email
+            input.form-control(type="email", required, placeholder="Enter your email", name="email", id="email") 
+        .col-12 
+            label(for="password").text-uppercase.small.mb-1 Password
+            input.form-control(type="password", required, placeholder="Enter your password", name="password", id="password") 
+        .col-6 
+            .form-check
+                input#remember.form-check-input(type="checkbox", value="")
+                label.form-check-label(for="remember") Remember for 30 days
+        .col-6 
+            .text-end
+                a.text-decoration-none.text-uppercase(href="") Forgot password
+        .col-12 
+            button.btn.btn-primary.text-uppercase.w-100(type="submit") Sign in
+        .col-12 
+            a.btn.btn-outline-secondary.w-100(href="") 
+                img.icon.me-1(src="img/google-icon.svg", alt="")
+                | Sign in with Google
+        .col-12 
+            .text-uppercase.text-secondary.text-center Don’t have an account? 
+                a(href="") Sign up
+        .col-12 
+            .text-center
+                a(href="") Experiencing other login problems? We can help.
