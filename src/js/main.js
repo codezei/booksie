@@ -319,7 +319,7 @@ function lazyVideo () {
 function dragAndDrop () {
     const dropArea = document.getElementById('drop-area');
 	if (!dropArea) return
-    const input = document.getElementById('book-image');
+    const input = document.getElementById('drop-image');
 	const previewImageContainer = document.getElementById('preview-image-container');
 	const previewRemoveImage = document.getElementById('preview-remove-image');
 

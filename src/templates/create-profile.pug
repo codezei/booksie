@@ -1,0 +1,15 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Create Profile";
+
+append head
+
+append content
+  include components/header
+  include components/create-profile/create-profile
+
+append scripts

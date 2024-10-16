@@ -7380,7 +7380,7 @@
   function dragAndDrop() {
     var dropArea = document.getElementById('drop-area');
     if (!dropArea) return;
-    var input = document.getElementById('book-image');
+    var input = document.getElementById('drop-image');
     var previewImageContainer = document.getElementById('preview-image-container');
     var previewRemoveImage = document.getElementById('preview-remove-image');
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
