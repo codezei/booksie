@@ -1,0 +1,16 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Select Membership";
+
+append head
+
+append content
+  include components/header
+  include components/select-membership/select-membership
+
+
+append scripts
