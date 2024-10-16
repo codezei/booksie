@@ -1,0 +1,15 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Trouble Logging";
+
+append head
+
+append content
+  include components/header
+  include components/trouble-logging/trouble-logging
+
+append scripts

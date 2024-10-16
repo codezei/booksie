@@ -1,0 +1,14 @@
+form()
+    .row.g-3
+        .col-12
+            label(for="register-email").text-uppercase.small.mb-1 Email
+            input.form-control(type="email", required, placeholder="Enter your email", name="email", id="register-email") 
+        .col-12 
+            label(for="register-password").text-uppercase.small.mb-1 Password
+            input.form-control(type="password", required, placeholder="Enter your password", name="password", id="register-password") 
+        .col-12 
+            button.btn.btn-primary.text-uppercase.w-100(type="submit") Sign up
+        .col-12 
+            a.btn.btn-outline-secondary.w-100(href="") 
+                img.icon.me-1(src="img/google-icon.svg", alt="")
+                | Sign in with Google
