@@ -1,0 +1,77 @@
+include ../../mixins/breadcrumbs
+
+section.mt-4.mb-6.mb-lg-9 
+    .container 
+        +breadcrumbs("Social Accounts - Settings")
+        .row.justify-content-center 
+            .col-12.col-xl-10.col-xxl-8 
+                h2.text-center.mb-3 My Settings - Social Accounts
+                p.text-center.text-secondary.mb-4.mb-lg-6 Now it's time to fill out some information about yourself so that others on the site can get to know you. You may add to this or change it at any time.
+                nav.mb-4.mb-lg-6
+                    #nav-tab.row.justify-content-center.g-2(role="tablist")
+                        .col-auto.flex-fill.flex-sm-grow-0
+                            button#nav-social-setting-tab.btn.btn-outline-primary.w-100.active(
+                                data-bs-toggle="tab", 
+                                data-bs-target="#nav-social-setting", 
+                                type="button", 
+                                role="tab", 
+                                aria-controls="nav-social-setting", 
+                                aria-selected="true") Social Setting
+                        .col-auto.flex-fill.flex-sm-grow-0
+                            button#nav-email-setting-tab.btn.btn-outline-primary.w-100(
+                                data-bs-toggle="tab", 
+                                data-bs-target="#nav-email-setting", 
+                                type="button", 
+                                role="tab", 
+                                aria-controls="nav-email-setting", 
+                                aria-selected="false") Email Setting
+                        .col-auto.flex-fill.flex-sm-grow-0
+                            button#nav-books-tab.btn.btn-outline-primary.w-100(
+                                data-bs-toggle="tab", 
+                                data-bs-target="#nav-books", 
+                                type="button", 
+                                role="tab", 
+                                aria-controls="nav-books", 
+                                aria-selected="false") Books
+                        .col-auto.flex-fill.flex-sm-grow-0
+                            button#nav-account-setting-tab.btn.btn-outline-primary.w-100(
+                                data-bs-toggle="tab", 
+                                data-bs-target="#nav-account-setting", 
+                                type="button", 
+                                role="tab", 
+                                aria-controls="nav-account-setting", 
+                                aria-selected="false") Account Setting
+                        .col-auto.flex-fill.flex-sm-grow-0
+                            button#nav-close-account-tab.btn.btn-outline-primary.w-100(
+                                data-bs-toggle="tab", 
+                                data-bs-target="#nav-close-account", 
+                                type="button", 
+                                role="tab", 
+                                aria-controls="nav-close-account", 
+                                aria-selected="false") Close Account
+                #nav-tabContent.tab-content
+                    #nav-social-setting.tab-pane.fade.show.active(
+                        role="tabpanel", 
+                        aria-labelledby="nav-social-setting-tab", 
+                        tabindex="0")
+                        include social-setting
+                    #nav-email-setting.tab-pane.fade(
+                        role="tabpanel", 
+                        aria-labelledby="nav-email-setting-tab", 
+                        tabindex="0")
+                        include email-setting
+                    #nav-books.tab-pane.fade(
+                        role="tabpanel", 
+                        aria-labelledby="nav-books-tab", 
+                        tabindex="0")
+                        include books
+                    #nav-account-setting.tab-pane.fade(
+                        role="tabpanel", 
+                        aria-labelledby="nav-account-setting-tab", 
+                        tabindex="0")
+                        include account-setting
+                    #nav-close-account.tab-pane.fade(
+                        role="tabpanel", 
+                        aria-labelledby="nav-close-account-tab", 
+                        tabindex="0")
+                        include close-account

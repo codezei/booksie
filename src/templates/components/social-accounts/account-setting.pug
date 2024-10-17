@@ -1,0 +1,13 @@
+div
+    form()
+        .mb-3 
+            label.form-label.text-uppercase.small(for="registration-email") Registration Email
+            input.form-control(type="email", placeholder="Enter your email", name="registration-email", id="registration-email", required) 
+        .mb-3 
+            label.form-label.text-uppercase.small(for="new-password") New Password
+            input.form-control(type="password", placeholder="Enter your password", name="new-password", id="new-password", required) 
+        .mb-3
+            label.form-label.text-uppercase.small(for="confirm-new-password") Confirm New Password
+            input.form-control(type="password", placeholder="Confirm password", name="confirm-new-password", id="confirm-new-password", required) 
+        div 
+            button.btn.btn-primary.text-uppercase(type="submit") Save

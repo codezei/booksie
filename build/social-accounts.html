@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Social Accounts</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl fw-medium"><a class="navbar-brand me-xl-5 me-xxl-6" href="#"><img src="img/logo.png" alt=""></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-xl-5 me-xxl-6 flex-fill justify-content-between">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./read.html">Read</a></li>
+            <li class="nav-item"><a class="nav-link" href="./all-houses.html">Houses</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contest.html">Contests</a></li>
+            <li class="nav-item"><a class="nav-link" href="./bookstore.html">Bookstore</a></li>
+          </ul>
+          <ul class="navbar-nav me-xl-4 me-xxl-5 align-items-xl-center">
+            <li class="nav-item me-xl-2 me-xxl-3"><a class="nav-link" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.58333 18.1251C4.875 18.1251 1.04167 14.2917 1.04167 9.58341C1.04167 4.87508 4.875 1.04175 9.58333 1.04175C14.2917 1.04175 18.125 4.87508 18.125 9.58341C18.125 14.2917 14.2917 18.1251 9.58333 18.1251ZM9.58333 2.29175C5.55833 2.29175 2.29167 5.56675 2.29167 9.58341C2.29167 13.6001 5.55833 16.8751 9.58333 16.8751C13.6083 16.8751 16.875 13.6001 16.875 9.58341C16.875 5.56675 13.6083 2.29175 9.58333 2.29175Z" fill="black"></path>
+                  <path d="M18.3333 18.9583C18.175 18.9583 18.0167 18.9 17.8917 18.775L16.225 17.1083C15.9833 16.8666 15.9833 16.4666 16.225 16.225C16.4667 15.9833 16.8667 15.9833 17.1083 16.225L18.775 17.8916C19.0167 18.1333 19.0167 18.5333 18.775 18.775C18.65 18.9 18.4917 18.9583 18.3333 18.9583Z" fill="black"></path>
+                </svg></a></li>
+            <li class="nav-item"><a class="nav-link text-decoration-underline" href="#" data-bs-toggle="modal" data-bs-target="#login-modal">Login</a>
+            <li class="nav-item dropdown mb-2 mb-xl-0"><a class="d-flex dropdown-toggle align-items-center nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <img class="rounded-circle me-2" src="img/user-ava.jpg" alt="" width="24" height="24">
+                <div class="small">Demi Wikinson</div>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">page1</a></li>
+                <li><a class="dropdown-item" href="">page2</a></li>
+              </ul>
+            </li>
+            </li>
+          </ul><a class="btn btn-primary me-3" href="#">Join</a><a class="btn btn-dark" href="#">Post Your Writing</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header pt-lg-5 px-lg-5 border-0">
+          <h3 class="modal-title" id="loginModalLabel">Log in</h3><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-lg-5 pb-lg-5">
+          <form>
+            <div class="row g-3">
+              <div class="col-12"><label class="text-uppercase small mb-1" for="email">Email</label><input class="form-control" type="email" required placeholder="Enter your email" name="email" id="email"></div>
+              <div class="col-12"> <label class="text-uppercase small mb-1" for="password">Password</label><input class="form-control" type="password" required placeholder="Enter your password" name="password" id="password"></div>
+              <div class="col-6">
+                <div class="form-check"><input class="form-check-input" id="remember" type="checkbox" value=""><label class="form-check-label" for="remember">Remember for 30 days</label></div>
+              </div>
+              <div class="col-6">
+                <div class="text-end"><a class="text-decoration-none text-uppercase" href="">Forgot password</a></div>
+              </div>
+              <div class="col-12"> <button class="btn btn-primary text-uppercase w-100" type="submit">Sign in</button></div>
+              <div class="col-12"> <a class="btn btn-outline-secondary w-100" href=""> <img class="icon me-1" src="img/google-icon.svg" alt="">Sign in with Google</a></div>
+              <div class="col-12">
+                <div class="text-uppercase text-secondary text-center">Don’t have an account? <a href="">Sign up</a></div>
+              </div>
+              <div class="col-12">
+                <div class="text-center"><a href="">Experiencing other login problems? We can help.</a></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="mt-4 mb-6 mb-lg-9">
+    <div class="container">
+      <nav class="mb-4 mb-lg-6" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Social Accounts - Settings</li>
+        </ol>
+      </nav>
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-10 col-xxl-8">
+          <h2 class="text-center mb-3">My Settings - Social Accounts</h2>
+          <p class="text-center text-secondary mb-4 mb-lg-6">Now it's time to fill out some information about yourself so that others on the site can get to know you. You may add to this or change it at any time.</p>
+          <nav class="mb-4 mb-lg-6">
+            <div class="row justify-content-center g-2" id="nav-tab" role="tablist">
+              <div class="col-auto flex-fill flex-sm-grow-0"><button class="btn btn-outline-primary w-100 active" id="nav-social-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-social-setting" type="button" role="tab" aria-controls="nav-social-setting" aria-selected="true">Social Setting</button></div>
+              <div class="col-auto flex-fill flex-sm-grow-0"><button class="btn btn-outline-primary w-100" id="nav-email-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-email-setting" type="button" role="tab" aria-controls="nav-email-setting" aria-selected="false">Email Setting</button></div>
+              <div class="col-auto flex-fill flex-sm-grow-0"><button class="btn btn-outline-primary w-100" id="nav-books-tab" data-bs-toggle="tab" data-bs-target="#nav-books" type="button" role="tab" aria-controls="nav-books" aria-selected="false">Books</button></div>
+              <div class="col-auto flex-fill flex-sm-grow-0"><button class="btn btn-outline-primary w-100" id="nav-account-setting-tab" data-bs-toggle="tab" data-bs-target="#nav-account-setting" type="button" role="tab" aria-controls="nav-account-setting" aria-selected="false">Account Setting</button></div>
+              <div class="col-auto flex-fill flex-sm-grow-0"><button class="btn btn-outline-primary w-100" id="nav-close-account-tab" data-bs-toggle="tab" data-bs-target="#nav-close-account" type="button" role="tab" aria-controls="nav-close-account" aria-selected="false">Close Account</button></div>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-social-setting" role="tabpanel" aria-labelledby="nav-social-setting-tab" tabindex="0">
+              <div>
+                <div class="mb-4 mb-lg-5">
+                  <h3 class="mb-3">Your Connected Accounts</h3>
+                  <p class="text-primary">No accounts yet. Please connect below and start building your fan network.</p>
+                </div>
+                <div>
+                  <h4 class="mb-3">Add Accounts</h4>
+                  <p class="text-secondary">Connect your account to Twitter to make posting updates about your account easier. You control what is posted.</p>
+                  <div class="row g-3">
+                    <div class="col-auto flex-fill flex-sm-grow-0"> <a class="btn btn-outline-secondary w-100" href=""> <svg class="icon me-1" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_525_2079)">
+                            <path d="M8.04752 21.7508C17.1042 21.7508 22.0578 14.2474 22.0578 7.74052C22.0578 7.5274 22.0578 7.31524 22.0434 7.10404C23.007 6.407 23.8389 5.54392 24.5 4.55524C23.6014 4.95364 22.648 5.2148 21.6718 5.32996C22.6998 4.71465 23.4692 3.74674 23.8366 2.60644C22.8701 3.18005 21.8126 3.58427 20.7099 3.80164C19.9675 3.01222 18.9856 2.48948 17.9162 2.31432C16.8468 2.13917 15.7494 2.32135 14.794 2.83269C13.8385 3.34403 13.0782 4.15601 12.6307 5.14299C12.1833 6.12996 12.0735 7.23691 12.3186 8.29252C10.3609 8.19432 8.44576 7.68555 6.69745 6.79924C4.94915 5.91294 3.40676 4.6689 2.1704 3.14788C1.54073 4.23188 1.34787 5.51511 1.6311 6.7363C1.91433 7.9575 2.65234 9.02483 3.69488 9.721C2.91123 9.69804 2.14465 9.48663 1.46 9.10468V9.16708C1.46031 10.3039 1.85385 11.4057 2.57387 12.2854C3.29389 13.1652 4.29606 13.7689 5.4104 13.994C4.68548 14.1917 3.92487 14.2206 3.18704 14.0784C3.50181 15.0568 4.11443 15.9123 4.93924 16.5254C5.76405 17.1385 6.75983 17.4785 7.78736 17.498C6.76644 18.3004 5.59731 18.8938 4.34687 19.244C3.09643 19.5942 1.78921 19.6944 0.5 19.5389C2.75183 20.9839 5.37192 21.7504 8.04752 21.7469" fill="#1DA1F2"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_525_2079">
+                              <rect width="24" height="24" fill="white" transform="translate(0.5)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg>Add Facebook Account </a></div>
+                    <div class="col-auto flex-fill flex-sm-grow-0"> <a class="btn btn-outline-secondary w-100" href=""> <svg class="icon me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9435 23L10.3941 15.0901L3.44691 23H0.507812L9.09013 13.2311L0.507812 1H8.05376L13.284 8.45502L19.8373 1H22.7764L14.5924 10.3165L23.4895 23H15.9435ZM19.2165 20.77H17.2378L4.71616 3.23H6.69515L11.7102 10.2532L12.5774 11.4719L19.2165 20.77Z" fill="#242E36"></path>
+                        </svg>Add Twitter Account</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-email-setting" role="tabpanel" aria-labelledby="nav-email-setting-tab" tabindex="0">
+              <div class="row flex-nowrap gx-2">
+                <div class="col-auto"> <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5724 11.5C7.76832 10.943 8.15502 10.4734 8.66403 10.1742C9.17303 9.87509 9.77148 9.76574 10.3534 9.86555C10.9353 9.96536 11.4631 10.2679 11.8433 10.7196C12.2235 11.1712 12.4316 11.7429 12.4307 12.3333C12.4307 14 9.93073 14.8333 9.93073 14.8333M9.9974 18.1666H10.0057M18.3307 14C18.3307 18.6023 14.5998 22.3333 9.9974 22.3333C5.39502 22.3333 1.66406 18.6023 1.66406 14C1.66406 9.39759 5.39502 5.66663 9.9974 5.66663C14.5998 5.66663 18.3307 9.39759 18.3307 14Z" stroke="#6F6F6F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <div class="col-auto">
+                  <h4 class="mb-3">The email alerts on the site are active by default. You are receiving email alerts for every new checked activity that is listed bellow.</h4>
+                  <p class="mb-4">To turn off emails for a specific activity, uncheck any relevant boxes below.</p>
+                  <form>
+                    <div class="form-check mb-3"><input class="form-check-input" id="fan-connections" type="checkbox" value="" name="fan-connections"><label class="form-check-label" for="fan-connections">Fan Connections</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input" id="fan-updates" type="checkbox" value="" name="fan-updates"><label class="form-check-label" for="fan-updates">Fan Updates (New Postings and News)</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input" id="received-messages" type="checkbox" value="" name="received-messages"><label class="form-check-label" for="received-messages">Received Messages</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input" id="new-reviews" type="checkbox" value="" name="new-reviews"><label class="form-check-label" for="new-reviews">New In-Line Reviews</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input" id="comments" type="checkbox" value="" name="comments"><label class="form-check-label" for="comments">Comments</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input" id="bookstore-review" type="checkbox" value="" name="bookstore-review"><label class="form-check-label" for="bookstore-review">BookStore Review</label></div>
+                    <div class="form-check mb-3"><input class="form-check-input" id="receive-updates" type="checkbox" value="" name="receive-updates"><label class="form-check-label" for="receive-updates">Receive udpates, newsletters, and writing-related offers</label></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-books" role="tabpanel" aria-labelledby="nav-books-tab" tabindex="0">
+              <div class="row flex-nowrap gx-2">
+                <div class="col-auto"> <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5724 11.5C7.76832 10.943 8.15502 10.4734 8.66403 10.1742C9.17303 9.87509 9.77148 9.76574 10.3534 9.86555C10.9353 9.96536 11.4631 10.2679 11.8433 10.7196C12.2235 11.1712 12.4316 11.7429 12.4307 12.3333C12.4307 14 9.93073 14.8333 9.93073 14.8333M9.9974 18.1666H10.0057M18.3307 14C18.3307 18.6023 14.5998 22.3333 9.9974 22.3333C5.39502 22.3333 1.66406 18.6023 1.66406 14C1.66406 9.39759 5.39502 5.66663 9.9974 5.66663C14.5998 5.66663 18.3307 9.39759 18.3307 14Z" stroke="#6F6F6F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <div class="col-auto">
+                  <h4 class="mb-3">There are no blocked writers at the moment.</h4>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-account-setting" role="tabpanel" aria-labelledby="nav-account-setting-tab" tabindex="0">
+              <div>
+                <form>
+                  <div class="mb-3"> <label class="form-label text-uppercase small" for="registration-email">Registration Email</label><input class="form-control" type="email" placeholder="Enter your email" name="registration-email" id="registration-email" required></div>
+                  <div class="mb-3"> <label class="form-label text-uppercase small" for="new-password">New Password</label><input class="form-control" type="password" placeholder="Enter your password" name="new-password" id="new-password" required></div>
+                  <div class="mb-3"><label class="form-label text-uppercase small" for="confirm-new-password">Confirm New Password</label><input class="form-control" type="password" placeholder="Confirm password" name="confirm-new-password" id="confirm-new-password" required></div>
+                  <div> <button class="btn btn-primary text-uppercase" type="submit">Save</button></div>
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-close-account" role="tabpanel" aria-labelledby="nav-close-account-tab" tabindex="0">
+              <div>
+                <h3 class="mb-4 mb-lg-5">Get Premium</h3>
+                <ul class="p-0 m-0">
+                  <li class="list-group-item mb-3 mb-lg-4 fw-medium"> <i class="icon icon-question me-1"></i>Please be advised that because of the manual effort involved, there is a $25 fee to reopen a closed account.</li>
+                  <li class="list-group-item mb-3 mb-lg-4 fw-medium"> <i class="icon icon-question me-1"></i>If you close your account, your profile and your content will be removed from the site. Your comments and Quickees will remain.</li>
+                  <li class="list-group-item mb-3 mb-lg-4 fw-medium"> <i class="icon icon-question me-1"></i>You and your content will be removed from your groups and you will lose your fans and the writers that you like.</li>
+                  <li class="list-group-item mb-3 mb-lg-4 fw-medium"> <i class="icon icon-question me-1"></i>Once you suspend your account, you will no longer have access to it.</li>
+                  <li class="list-group-item mb-3 mb-lg-4 fw-medium"> <i class="icon icon-question me-1"></i>To reenable your account you will have to contact the admins at Booksie.</li>
+                </ul>
+                <form>
+                  <div class="mb-3"><label class="form-label text-uppercase small" for="reason">Please enter the reason you want to suspend your account (required):</label><textarea class="form-control" name="reason" id="reason" required rows="4"> </textarea></div>
+                  <div> <button class="btn btn-primary text-uppercase" type="submit">Suspend My Account</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white py-6 py-lg-9">
+    <div class="container">
+      <div class="row g-3 justify-content-xl-between">
+        <div class="col-12 col-md-6 col-lg-3">
+          <p class="text-center text-md-start mb-5 mb-lg-6"><a class="navbar-brand" href="./index.html"><img src="img/logo-footer.svg" alt=""></a></p>
+          <p class="text-center text-md-start">BOOKSIE © 2024 | All rights reserved. Terms under which this service is provided to you. Privacy Policy.</p>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Read Houses</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Members</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Tags</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-auto col-md-3 col-xl-auto">
+          <nav class="footer-menu">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link link-light" href="#">Writing Resources</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Top 100 Love Poems</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Help Guide</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Publishing Advisor</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3">
+          <div class="row g-3">
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_440_1615)"></g>
+                    <path d="M19.9974 13.3334V28L13.3307 24L6.66406 28V13.3334C6.66406 12.2725 7.08549 11.2551 7.83564 10.5049C8.58578 9.7548 9.6032 9.33337 10.6641 9.33337H15.9974C17.0583 9.33337 18.0757 9.7548 18.8258 10.5049C19.576 11.2551 19.9974 12.2725 19.9974 13.3334Z" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.6641 4H21.3307C22.3916 4 23.409 4.42143 24.1592 5.17157C24.9093 5.92172 25.3307 6.93913 25.3307 8V22.6667" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <defs>
+                      <clippath id="clip0_440_1615"></clippath>
+                      <rect width="32" height="32" fill="white"></rect>
+                    </defs>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Booksie Limited Editions</p>
+                </div>
+              </a></div>
+            <div class="col-6 col-lg-12 col-xl-6"><a class="card bg-primary border-primary text-white h-100" href="" style="--bs-bg-opacity: .4;">
+                <div class="card-header border-0"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8.05601C13.8021 6.08449 10.9525 4.99594 8 5.00001C6.59733 5.00001 5.25067 5.24001 4 5.68268V24.6827C5.28483 24.2294 6.63755 23.9985 8 24C11.0733 24 13.8773 25.156 16 27.056M16 8.05601C18.1978 6.08438 21.0474 4.99581 24 5.00001C25.4027 5.00001 26.7493 5.24001 28 5.68268V24.6827C26.7152 24.2294 25.3624 23.9985 24 24C21.0475 23.9959 18.1979 25.0845 16 27.056M16 8.05601V27.056" stroke="#276CDA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <div class="card-body">
+                  <p class="card-text">Promote Your Published Book</p>
+                </div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

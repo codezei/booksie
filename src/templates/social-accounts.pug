@@ -1,0 +1,16 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Social Accounts";
+
+append head
+
+append content
+  include components/header
+  include components/social-accounts/social-accounts
+  
+
+append scripts
