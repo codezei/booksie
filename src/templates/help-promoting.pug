@@ -1,0 +1,19 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "Help telling and promoting your story";
+
+append head
+
+append content
+  include components/header
+  include components/help-promoting/intro
+  include components/help-promoting/info
+  include components/help-promoting/reviews
+
+
+
+append scripts
