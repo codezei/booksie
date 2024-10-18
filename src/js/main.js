@@ -290,6 +290,36 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		},
 	});
+	let homeProfileBoosterSwiper = new Swiper(".home-profile-booster-swiper", {
+		spaceBetween: 12,
+		slidesPerView: 2,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			}
+		},
+	});
+	let promotedBooksSwiper = new Swiper(".promoted-books-swiper", {
+		spaceBetween: 12,
+		slidesPerView: 2,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1220: {
+				slidesPerView: 5,
+			},
+			1440: {
+				slidesPerView: 6,
+			},
+		},
+	});
 
 
 	dragAndDrop()
