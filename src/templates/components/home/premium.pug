@@ -5,7 +5,7 @@ include ../../mixins/section-title
     +section-title("Features Premium Members")
     #pills-tab.row.justify-content-center.mb-5.g-2(role="tablist")
         .col-auto
-            button#pills-ebooks-tab.btn.btn-outline-primary.active(
+            button#pills-ebooks-tab.btn.btn-navigation.active(
                 data-bs-toggle="pill", 
                 data-bs-target="#pills-ebooks", 
                 type="button", 
@@ -14,7 +14,7 @@ include ../../mixins/section-title
                 aria-selected="true"
                 ) eBooks
         .col-auto
-            button#pills-short-stories-tab.btn.btn-outline-primary(
+            button#pills-short-stories-tab.btn.btn-navigation(
                 data-bs-toggle="pill", 
                 data-bs-target="#pills-short-stories", 
                 type="button", 
@@ -23,7 +23,7 @@ include ../../mixins/section-title
                 aria-selected="false"
                 ) Short Stories
         .col-auto
-            button#pills-poems-tab.btn.btn-outline-primary(
+            button#pills-poems-tab.btn.btn-navigation(
                 data-bs-toggle="pill", 
                 data-bs-target="#pills-poems", 
                 type="button", 

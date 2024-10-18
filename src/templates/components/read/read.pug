@@ -2,7 +2,7 @@ include ../../mixins/breadcrumbs
 include ../../mixins/form-check
 include ../../mixins/cards/read-card
 
-section.mb-6.mb-lg-9
+section.mt-4.mb-6.mb-lg-9
     .container
         +breadcrumbs("Writing Contests")
         h2.text-center.mb-4.mb-md-6.text-md-start Find something great to Read
@@ -119,24 +119,24 @@ section.mb-6.mb-lg-9
                         .collapse.d-md-block.collapse-filter
                             ul#pills-tab.nav.nav-pills.mb-3.nav-fill(role="tablist")
                                 li.nav-item.m-1(role="presentation")
-                                    button#pills-new-tab.btn.btn-outline-primary.w-100.active(data-bs-toggle="pill", data-bs-target="#pills-new", type="button", role="tab", aria-controls="pills-new", aria-selected="true")
+                                    button#pills-new-tab.btn.btn-navigation.w-100.active(data-bs-toggle="pill", data-bs-target="#pills-new", type="button", role="tab", aria-controls="pills-new", aria-selected="true")
                                         | New
                                 li.nav-item.m-1(role="presentation")
-                                    button#pills-popular-shelves-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-popular-shelves", type="button", role="tab", aria-controls="pills-popular-shelves", aria-selected="false")
+                                    button#pills-popular-shelves-tab.btn.btn-navigation.w-100(data-bs-toggle="pill", data-bs-target="#pills-popular-shelves", type="button", role="tab", aria-controls="pills-popular-shelves", aria-selected="false")
                                         | Popular Shelves
                                 li.nav-item.m-1(role="presentation")
-                                    button#pills-popular-reads-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-popular-reads", type="button", role="tab", aria-controls="pills-popular-reads", aria-selected="false")
+                                    button#pills-popular-reads-tab.btn.btn-navigation.w-100(data-bs-toggle="pill", data-bs-target="#pills-popular-reads", type="button", role="tab", aria-controls="pills-popular-reads", aria-selected="false")
                                         | Popular Reads
                                 li.nav-item.m-1(role="presentation")
-                                    button#pills-contest-winners-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-contest-winners", type="button", role="tab", aria-controls="pills-contest-winners", aria-selected="false")
+                                    button#pills-contest-winners-tab.btn.btn-navigation.w-100(data-bs-toggle="pill", data-bs-target="#pills-contest-winners", type="button", role="tab", aria-controls="pills-contest-winners", aria-selected="false")
                                         | Contest Winners
                                 li.nav-item.m-1(role="presentation")
-                                    button#pills-audio-books-tab.btn.btn-outline-primary.w-100(data-bs-toggle="pill", data-bs-target="#pills-audio-books", type="button", role="tab", aria-controls="pills-audio-books", aria-selected="false")
+                                    button#pills-audio-books-tab.btn.btn-navigation.w-100(data-bs-toggle="pill", data-bs-target="#pills-audio-books", type="button", role="tab", aria-controls="pills-audio-books", aria-selected="false")
                                         | Audio Books
                         #pills-tabContent.tab-content
                             #pills-new.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-new-tab")
-                                .row.gy-3
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                .row.g-2.g-lg-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Braided Wigs: Trends in Length and Style",
                                             "CelestialDuck",
@@ -145,14 +145,14 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
                                             {href: "#", text: "Read more"}
                                             )
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Chrysalis Days & Butterfly Nights",
                                             "JanKarlsson",
@@ -161,14 +161,14 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
                                             {href: "#", text: "Read more"}
                                             )
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Braided Wigs: Trends in Length and Style",
                                             "h j furl",
@@ -177,14 +177,14 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
                                             {href: "#", text: "Read more"}
                                             )
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Pappus and Sonder: The Screenplay",
                                             "SLK",
@@ -193,8 +193,8 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"},
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
@@ -202,7 +202,7 @@ section.mb-6.mb-lg-9
                                             )
                             #pills-popular-shelves.tab-pane.fade(role="tabpanel", aria-labelledby="pills-popular-shelves-tab")
                                 .row.gy-3
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Braided Wigs: Trends in Length and Style",
                                             "CelestialDuck",
@@ -211,14 +211,14 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
                                             {href: "#", text: "Read more"}
                                             )
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Chrysalis Days & Butterfly Nights",
                                             "JanKarlsson",
@@ -227,14 +227,14 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
                                             {href: "#", text: "Read more"}
                                             )
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Braided Wigs: Trends in Length and Style",
                                             "h j furl",
@@ -243,8 +243,8 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
@@ -252,7 +252,7 @@ section.mb-6.mb-lg-9
                                             )
                             #pills-popular-reads.tab-pane.fade(role="tabpanel", aria-labelledby="pills-popular-reads-tab")
                                 .row.gy-3
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Braided Wigs: Trends in Length and Style",
                                             "CelestialDuck",
@@ -261,14 +261,14 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
                                             {href: "#", text: "Read more"}
                                             )
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Chrysalis Days & Butterfly Nights",
                                             "JanKarlsson",
@@ -277,8 +277,8 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",
@@ -286,7 +286,7 @@ section.mb-6.mb-lg-9
                                             )
                             #pills-contest-winners.tab-pane.fade(role="tabpanel", aria-labelledby="pills-contest-winners-tab")
                                 .row.gy-3
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Braided Wigs: Trends in Length and Style",
                                             "CelestialDuck",
@@ -295,8 +295,8 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "The Celestial is a symbol of the divine, a pillar stretching high into the heavens. It is worshipped for the blessings it brought upon the world.",
@@ -304,7 +304,7 @@ section.mb-6.mb-lg-9
                                             )
                             #pills-audio-books.tab-pane.fade(role="tabpanel", aria-labelledby="pills-audio-books-tab")
                                 .row.gy-3
-                                    .col-6.col-md-6.col-xl-4.col-xxl-3
+                                    .col-6.col-xl-4.col-xxl-3
                                         +read-card(
                                             "Pappus and Sonder: The Screenplay",
                                             "SLK",
@@ -313,8 +313,8 @@ section.mb-6.mb-lg-9
                                             "September 05, 2024",
                                             [
                                                 {name: "Reads", value: "1734"}, 
-                                                {name: "Comments", value: "512"}, 
                                                 {name: "Shelves", value: "2"}, 
+                                                {name: "Comments", value: "512"}, 
                                                 {name: "Likes", value: "421"}
                                             ],
                                             "This song and poem are crafted to touch the hearts of those who feel isolated and judged, reminding them that they are not alone...",

@@ -33,6 +33,7 @@ img {
   background-size: 150px 150px;
   color: #fff;
   position: relative;
+  overflow: hidden;
   .container {
     position: relative;
     z-index: 2;
@@ -165,9 +166,7 @@ a.card:not(:hover) {
   max-width: 636px;
   margin-left: auto;
   margin-right: auto;
-  p {
-      color: #404040
-  }
+
 }
 
 .rating {
@@ -310,6 +309,7 @@ a.card:not(:hover) {
   }
   p {
       margin: 1em 0;
+      color: #404040;
   }
   hr {
       margin: 2rem 0;

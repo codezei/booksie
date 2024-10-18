@@ -8,16 +8,15 @@ mixin read-card(title, author, src, tags, date, stats, text, link)
                 img.card-img.position-absolute.h-100.w-auto.translate-middle.top-50.start-50(src=src, alt="")
             .text-center.small
                 each tag in tags
-                    span.badge.m-1.fw-medium.p-2.text-uppercase(class="bg-" + tag.type + (tag.type === "warning" ? " text-dark" : ""))= tag.name
+                    span.badge.m-1.fw-medium.p-2.text-uppercase(class="bg-" + tag.type + (tag.type === "warning" ? " text-black" : ""))= tag.name
         .card-body.px-0.pb-0
             p.text-secondary= date
             .row.g-1.justify-content-between.mb-3
                 each stat in stats
-                    .col-6
-                        i.icon(class="icon-" + stat.name.toLowerCase())
-                        |&nbsp;
+                    .col-auto.col-sm-6
+                        i.icon.me-1(class="icon-" + stat.name.toLowerCase())
                         span= stat.name
-                        |&nbsp;
+                        | :&nbsp;
                         span= stat.value
             p.text-secondary.card-text= text
         .card-footer.border-0.px-0.pb-0

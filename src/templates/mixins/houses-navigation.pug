@@ -2,7 +2,7 @@ mixin houses-navigation(links, leave)
     .row.g-2.mb-2.mb-sm-4.mb-lg-6
         each link in links
             .col.col-6.col-lg-auto 
-                a.btn.btn-outline-primary.w-100(href=link.href, class=(link.active ? "active": ""))= link.text
+                a.btn.btn-navigation.w-100(href=link.href, class=(link.active ? "active": ""))= link.text
         if leave
             .col.col-12.col-lg-auto.ms-lg-auto
                 a.btn.btn-primary.w-100(href=leave.href) 
