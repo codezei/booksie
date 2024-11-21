@@ -7230,9 +7230,9 @@
     var swiperFeaturedReads = new Swiper(".featured-reads-swiper", {
       spaceBetween: 16,
       slidesPerView: 1.5,
-      grid: {
-        rows: 1
-      },
+      // grid: {
+      // 	rows: 1,
+      // },
       navigation: {
         nextEl: ".featured-reads-button-next",
         prevEl: ".featured-reads-button-prev"
@@ -7240,29 +7240,29 @@
       breakpoints: {
         576: {
           slidesPerView: 2,
-          spaceBetween: 24,
-          grid: {
-            rows: 1
-          }
+          spaceBetween: 24 // grid: {
+          // 	rows: 1,
+          // },
+
         },
         768: {
-          slidesPerView: 3,
-          grid: {
-            rows: 1
-          }
+          slidesPerView: 3 // grid: {
+          // 	rows: 1,
+          // },
+
         },
         992: {
-          slidesPerView: 2,
-          grid: {
-            rows: 1
-          }
-        },
-        1220: {
-          slidesPerView: 2,
-          grid: {
-            rows: 2
-          }
-        }
+          slidesPerView: 2 // grid: {
+          // 	rows: 1,
+          // },
+
+        } // 1220: {
+        // 	slidesPerView: 2,
+        // 	grid: {
+        // 		rows: 2,
+        // 	},
+        // },
+
       }
     });
     var newBooksBooks = new Swiper(".new-books-swiper", {

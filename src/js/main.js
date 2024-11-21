@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	let swiperFeaturedReads = new Swiper(".featured-reads-swiper", {
 		spaceBetween: 16,
 		slidesPerView: 1.5,
-		grid: {
-			rows: 1,
-		},
+		// grid: {
+		// 	rows: 1,
+		// },
 		navigation: {
 			nextEl: ".featured-reads-button-next",
 			prevEl: ".featured-reads-button-prev",
@@ -174,28 +174,28 @@ document.addEventListener('DOMContentLoaded', function () {
 			576: {
 				slidesPerView: 2,
 				spaceBetween: 24,
-				grid: {
-					rows: 1,
-				},
+				// grid: {
+				// 	rows: 1,
+				// },
 			},
 			768: {
 				slidesPerView: 3,
-				grid: {
-					rows: 1,
-				},
+				// grid: {
+				// 	rows: 1,
+				// },
 			},
 			992: {
 				slidesPerView: 2,
-				grid: {
-					rows: 1,
-				},
+				// grid: {
+				// 	rows: 1,
+				// },
 			},
-			1220: {
-				slidesPerView: 2,
-				grid: {
-					rows: 2,
-				},
-			},
+			// 1220: {
+			// 	slidesPerView: 2,
+			// 	grid: {
+			// 		rows: 2,
+			// 	},
+			// },
 		},
 	});
 	let newBooksBooks = new Swiper(".new-books-swiper", {

@@ -1,21 +1,21 @@
 header.header.border-bottom.py-1
-    .container-fluid
-        nav.navbar.navbar-expand-xl.fw-medium
+    .container.header__container
+        nav.navbar.navbar-expand-xl
             a.navbar-brand.me-xl-5.me-xxl-6(href="./index.html")
                 img(src="img/logo.png", alt="")
             button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
                 span.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
-                ul.navbar-nav.me-xl-5.me-xxl-auto.flex-fill.justify-content-between(style="max-width: 700px")
-                    li.nav-item
+                ul.navbar-nav.me-xl-5.me-xxl-auto.flex-fill.justify-content-center
+                    li.nav-item.me-xxl-5
                         a.nav-link.active(aria-current="page", href="./index.html") Home
-                    li.nav-item
+                    li.nav-item.me-xxl-5
                         a.nav-link(href="./read.html") Read
-                    li.nav-item
+                    li.nav-item.me-xxl-5
                         a.nav-link(href="./all-houses.html") Houses
-                    li.nav-item
+                    li.nav-item.me-xxl-5
                         a.nav-link(href="./contest.html") Contests
-                    li.nav-item
+                    li.nav-item.me-xxl-5
                         a.nav-link(href="./bookstore.html") Bookstore
                 ul.navbar-nav.me-xl-4.me-xxl-5.align-items-xl-center
                     li.nav-item.me-xl-2.me-xxl-3
@@ -39,5 +39,5 @@ header.header.border-bottom.py-1
                                 a.dropdown-item(href="") page2
                     //- end if user authorized
                 a.btn.btn-primary.me-3.py-2.px-3(href="#") Join
-                a.btn.btn-dark.py-2.px-3(href="#") Post Your Writing
+                a.btn.btn-dark.py-2.px-3.text-nowrap(href="#") Post Your Writing
 include login-modal
