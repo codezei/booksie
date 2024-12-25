@@ -270,6 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let bookOtherBooks = new Swiper(".book-boosted-other-swiper", {
 		spaceBetween: 12,
 		slidesPerView: 1.5,
+		centerInsufficientSlides: true,
 		navigation: {
 			nextEl: ".book-boosted-other-button-next",
 			prevEl: ".book-boosted-other-button-prev",
@@ -295,6 +296,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let premiumBooks = new Swiper(".boosted-premium-swiper", {
 		spaceBetween: 12,
 		slidesPerView: 1.5,
+		centerInsufficientSlides: true,
 		navigation: {
 			nextEl: ".boosted-premium-button-next",
 			prevEl: ".boosted-premium-button-prev",
@@ -320,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let bookPremiumBooks = new Swiper(".book-boosted-premium-swiper", {
 		spaceBetween: 12,
 		slidesPerView: 1.5,
+		centerInsufficientSlides: true,
 		navigation: {
 			nextEl: ".book-boosted-premium-button-next",
 			prevEl: ".book-boosted-premium-button-prev",
