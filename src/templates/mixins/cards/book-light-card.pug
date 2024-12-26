@@ -1,6 +1,6 @@
 mixin book-light-card(href, src, title, author, height = "350px")
     a.card.border-0.bg-transparent(href=href)
-        .p-3.card-img.d-flex.align-items-center.justify-content-center.bg-white(style=`height: ${height};`)
+        .p-3.card-img.d-flex.align-items-center.justify-content-center.border(style=`height: ${height};`)
             img.card-img.object-fit-contain.mh-100(src=src, alt="")
         .card-body.text-center.px-0
             h4.card-title= title
