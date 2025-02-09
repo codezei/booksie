@@ -1,0 +1,21 @@
+extends settings/layout
+
+prepend html
+  - const lang = "en";
+
+prepend head
+  - const pageTitle = "About us";
+
+append head
+
+append content
+  include components/header
+  include components/about/imagination
+  include components/about/perfect
+  include components/about/publish
+  include components/about/promote
+  include components/about/protect
+  include components/about/profit
+  include components/about/about
+
+append scripts

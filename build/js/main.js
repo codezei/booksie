@@ -7230,9 +7230,6 @@
     var swiperFeaturedReads = new Swiper(".featured-reads-swiper", {
       spaceBetween: 16,
       slidesPerView: 1.5,
-      // grid: {
-      // 	rows: 1,
-      // },
       navigation: {
         nextEl: ".featured-reads-button-next",
         prevEl: ".featured-reads-button-prev"
@@ -7240,29 +7237,14 @@
       breakpoints: {
         576: {
           slidesPerView: 2,
-          spaceBetween: 24 // grid: {
-          // 	rows: 1,
-          // },
-
+          spaceBetween: 24
         },
         768: {
-          slidesPerView: 3 // grid: {
-          // 	rows: 1,
-          // },
-
+          slidesPerView: 3
         },
         992: {
-          slidesPerView: 2 // grid: {
-          // 	rows: 1,
-          // },
-
-        } // 1220: {
-        // 	slidesPerView: 2,
-        // 	grid: {
-        // 		rows: 2,
-        // 	},
-        // },
-
+          slidesPerView: 2
+        }
       }
     });
     var newBooksBooks = new Swiper(".new-books-swiper", {
@@ -7459,6 +7441,52 @@
         },
         1440: {
           slidesPerView: 6
+        }
+      }
+    });
+    var swiperPublishReads = new Swiper(".publish-reads-swiper", {
+      spaceBetween: 16,
+      slidesPerView: 2,
+      navigation: {
+        nextEl: ".publish-reads-button-next",
+        prevEl: ".publish-reads-button-prev"
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2.5,
+          spaceBetween: 24
+        },
+        768: {
+          slidesPerView: 3
+        },
+        992: {
+          slidesPerView: 2
+        },
+        1220: {
+          slidesPerView: 3
+        }
+      }
+    });
+    var swiperPublishLimitedReads = new Swiper(".publish-limited-reads-swiper", {
+      spaceBetween: 16,
+      slidesPerView: 2,
+      navigation: {
+        nextEl: ".publish-limited-reads-button-next",
+        prevEl: ".publish-limited-reads-button-prev"
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2.5,
+          spaceBetween: 24
+        },
+        768: {
+          slidesPerView: 3
+        },
+        992: {
+          slidesPerView: 2
+        },
+        1220: {
+          slidesPerView: 3
         }
       }
     });

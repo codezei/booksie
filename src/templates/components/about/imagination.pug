@@ -1,0 +1,14 @@
+include ../../mixins/breadcrumbs
+
+section.mt-4 
+    .container 
+        +breadcrumbs("All Content")
+        .dark-bg.rounded-4.overflow-hidden.p-5
+            .container
+                .row.align-items-center 
+                    .col-12.col-md-8.col-xl-6.offset-xl-3 
+                        h2.text-center.mb-5 Unlock Your Imagination
+                        p.text-center.mb-5.mb-md-0
+                            a.btn.btn-primary(href="#") Become a Member
+                    .col-12.col-md-4.col-xl-3.text-center 
+                        img(src="img/contest-img.png", alt="")

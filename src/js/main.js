@@ -163,9 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	let swiperFeaturedReads = new Swiper(".featured-reads-swiper", {
 		spaceBetween: 16,
 		slidesPerView: 1.5,
-		// grid: {
-		// 	rows: 1,
-		// },
 		navigation: {
 			nextEl: ".featured-reads-button-next",
 			prevEl: ".featured-reads-button-prev",
@@ -174,28 +171,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			576: {
 				slidesPerView: 2,
 				spaceBetween: 24,
-				// grid: {
-				// 	rows: 1,
-				// },
 			},
 			768: {
 				slidesPerView: 3,
-				// grid: {
-				// 	rows: 1,
-				// },
 			},
 			992: {
 				slidesPerView: 2,
-				// grid: {
-				// 	rows: 1,
-				// },
 			},
-			// 1220: {
-			// 	slidesPerView: 2,
-			// 	grid: {
-			// 		rows: 2,
-			// 	},
-			// },
 		},
 	});
 	let newBooksBooks = new Swiper(".new-books-swiper", {
@@ -392,6 +374,52 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			1440: {
 				slidesPerView: 6,
+			},
+		},
+	});
+	let swiperPublishReads = new Swiper(".publish-reads-swiper", {
+		spaceBetween: 16,
+		slidesPerView: 2,
+		navigation: {
+			nextEl: ".publish-reads-button-next",
+			prevEl: ".publish-reads-button-prev",
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2.5,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1220: {
+				slidesPerView: 3,
+			},
+		},
+	});
+	let swiperPublishLimitedReads = new Swiper(".publish-limited-reads-swiper", {
+		spaceBetween: 16,
+		slidesPerView: 2,
+		navigation: {
+			nextEl: ".publish-limited-reads-button-next",
+			prevEl: ".publish-limited-reads-button-prev",
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2.5,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1220: {
+				slidesPerView: 3,
 			},
 		},
 	});
