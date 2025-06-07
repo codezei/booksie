@@ -1,0 +1,85 @@
+.my-5 
+    h3.mb-5 House Messages
+    table.table.table-stacked
+        thead
+            tr.align-middle  
+                td Topic
+                td Replies
+                td Views
+                td Last post
+        tbody
+            tr.align-middle 
+                td(data-label="Topic")
+                    div
+                        a(href="") Rules (Read before doing anything else)
+                td(data-label="Replies")
+                    div
+                        .text-secondary 36
+                td(data-label="Views")
+                    div
+                        .text-secondary 20,471
+                td(data-label="Last post")
+                    div
+                        .text-secondary 06/16/2024
+            tr.align-middle 
+                td(data-label="Topic")
+                    div
+                        a(href="") Rules (Read before doing anything else)
+                td(data-label="Replies")
+                    div
+                        .text-secondary 36
+                td(data-label="Views")
+                    div
+                        .text-secondary 20,471
+                td(data-label="Last post")
+                    div
+                        .text-secondary 06/16/2024
+            tr.align-middle 
+                td(data-label="Topic")
+                    div
+                        a(href="") Rules (Read before doing anything else)
+                td(data-label="Replies")
+                    div
+                        .text-secondary 36
+                td(data-label="Views")
+                    div
+                        .text-secondary 20,471
+                td(data-label="Last post")
+                    div
+                        .text-secondary 06/16/2024
+            tr.align-middle 
+                td(data-label="Topic")
+                    div
+                        a(href="") Rules (Read before doing anything else)
+                td(data-label="Replies")
+                    div
+                        .text-secondary 36
+                td(data-label="Views")
+                    div
+                        .text-secondary 20,471
+                td(data-label="Last post")
+                    div
+                        .text-secondary 06/16/2024
+style. 
+    @media (max-width: 767px) {
+        .table-stacked thead {
+            display: none;
+        }
+
+        .table-stacked tr {
+            display: block;
+        }
+
+        .table-stacked td {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            align-items: baseline;
+            position: relative;
+        }
+
+        .table-stacked td::before {
+            content: attr(data-label);
+            text-align: left;
+        }
+    }

@@ -202,6 +202,50 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		},
 	});
+	let newPostingsBooks = new Swiper(".new-postings-swiper", {
+		spaceBetween: 12,
+		slidesPerView: 1.5,
+		navigation: {
+			nextEl: ".new-postings-button-next",
+			prevEl: ".new-postings-button-prev",
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1024: {
+				slidesPerView: 4,
+			},
+			1220: {
+				slidesPerView: 5,
+			},
+		},
+	});
+	let newMembersBooks = new Swiper(".new-members-swiper", {
+		spaceBetween: 12,
+		slidesPerView: 1.5,
+		navigation: {
+			nextEl: ".new-members-button-next",
+			prevEl: ".new-members-button-prev",
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1024: {
+				slidesPerView: 4,
+			},
+			1220: {
+				slidesPerView: 5,
+			},
+		},
+	});
 	let bookShortStories = new Swiper(".book-short-stories-swiper", {
 		spaceBetween: 12,
 		slidesPerView: 1.5,

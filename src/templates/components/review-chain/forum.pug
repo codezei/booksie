@@ -1,0 +1,126 @@
+include ../../mixins/section
+include ../../mixins/section-title
+include ../../mixins/breadcrumbs
+
+section.mt-4.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Review Chain House")
+        .row.justify-content-between.align-items-center.mb-4.gy-2 
+            .col-auto 
+                a.h2.link-primary(href="") Want to get rid of rhese ads?
+            .col-auto 
+                a.text-secondary(href="") You must or login to post a new topic 
+        table.table.table-stacked
+            thead
+                tr.align-middle  
+                    td #
+                    td Topics
+                    td Replies
+                    td Views
+                    td Last post
+            tbody
+                tr.align-middle 
+                    td(data-label="#")
+                        div
+                            .text-secondary 1
+                    td(data-label="Topics")
+                        div
+                            .text-bold Sticky: 
+                                a(href="").text-black Rules (Read before doing anything else)
+                            .text-secondary by Archia (
+                                a(href="") 1
+                                |&nbsp;
+                                a(href="") 2
+                                |&nbsp;
+                                a(href="") 3
+                                |&nbsp;
+                                a(href="") 4
+                                | )
+                    td(data-label="Replies")
+                        div
+                            .text-secondary 36
+                    td(data-label="Views")
+                        div
+                            .text-secondary 20,471
+                    td(data-label="Last post")
+                        div
+                            a.text-bold.text-uppercase.text-black.text-nowrap(href="") 2024-06-16 14:54:50
+                            .text-secondary by barry jonstone
+                tr.align-middle 
+                    td(data-label="#")
+                        div
+                            .text-secondary 2
+                    td(data-label="Topics")
+                        div
+                            .text-bold Sticky: 
+                                a(href="").text-black Rules (Read before doing anything else)
+                            .text-secondary by Archia (
+                                a(href="") 1
+                                |&nbsp;
+                                a(href="") 2
+                                |&nbsp;
+                                a(href="") 3
+                                |&nbsp;
+                                a(href="") 4
+                                | )
+                    td(data-label="Replies")
+                        div
+                            .text-secondary 36
+                    td(data-label="Views")
+                        div
+                            .text-secondary 20,471
+                    td(data-label="Last post")
+                        div
+                            a.text-bold.text-uppercase.text-black.text-nowrap(href="") 2024-06-16 14:54:50
+                            .text-secondary by barry jonstone
+                tr.align-middle 
+                    td(data-label="#")
+                        div
+                            .text-secondary 3
+                    td(data-label="Topics")
+                        div
+                            .text-bold Sticky: 
+                                a(href="").text-black Rules (Read before doing anything else)
+                            .text-secondary by Archia (
+                                a(href="") 1
+                                |&nbsp;
+                                a(href="") 2
+                                |&nbsp;
+                                a(href="") 3
+                                |&nbsp;
+                                a(href="") 4
+                                | )
+                    td(data-label="Replies")
+                        div
+                            .text-secondary 36
+                    td(data-label="Views")
+                        div
+                            .text-secondary 20,471
+                    td(data-label="Last post")
+                        div
+                            a.text-bold.text-uppercase.text-black.text-nowrap(href="") 2024-06-16 14:54:50
+                            .text-secondary by barry jonstone
+        include ../pagination
+    style. 
+        @media (max-width: 767px) {
+        .table-stacked thead {
+            display: none;
+        }
+
+        .table-stacked tr {
+            display: block;
+        }
+
+        .table-stacked td {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            align-items: baseline;
+            position: relative;
+        }
+
+        .table-stacked td::before {
+            content: attr(data-label);
+            text-align: left;
+        }
+        }

@@ -1,0 +1,157 @@
+include ../../mixins/breadcrumbs
+include ../../mixins/cards/houses-member-card
+
+section.mt-4.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Content")
+        h2.mb-5 The Review Chain Publishing House Members
+        .row.justify-content-between.mb-4.g-2 
+            .col-12.col-md-auto 
+                //- button.btn.btn-dark.w-100.mb-3.d-md-none.btn-md(type="button", data-bs-toggle="collapse", data-bs-target=".collapse-filter", aria-expanded="false", aria-controls="collapseExample")
+                //-     | Filter
+                //- .collapse.d-md-block.collapse-filter
+                ul.nav.nav-pills.nav-fill
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-home.html")
+                            | Home
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-forum.html")
+                            | Forum
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100.active(href="review-chain-content.html")
+                            | Content
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-members.html")
+                            | Members
+            .col-12.col-md-auto 
+                form.nav.nav-pills.nav-fill(method="GET")
+                    .nav-item.m-1
+                        select.form-select(aria-label="Order by", name="genre")
+                            option(selected) Genre
+                            option(value="1") One
+                            option(value="2") Two
+                            option(value="3") Three
+                    .nav-item.m-1
+                        select.form-select(aria-label="Order by", name="type")
+                            option(selected) Type
+                            option(value="1") One
+                            option(value="2") Two
+                            option(value="3") Three
+                    .nav-item.m-1
+                        select.form-select(aria-label="Order by", name="author")
+                            option(selected) Author
+                            option(value="1") One
+                            option(value="2") Two
+                            option(value="3") Three
+        .row.row-cols-xxl-5.gy-3
+            .col-12.col-sm-6.col-lg-4.col-xl-3 
+                .card.border-0.h-100
+                    .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 320px")
+                        a.h6.text-center.card-title.text-uppercase.w-100(href="") Micah
+                        p.text-secondary.text-uppercase.text-center Chapter 1
+                        div.position-relative.flex-fill
+                            img.card-img.position-absolute.w-auto.translate-middle.top-50.start-50(src="img/houses-img-1.jpg", alt="")
+                    .card-body.px-0
+                        p.text-secondary.text-uppercase Book / Other
+                        p.text-secondary April 21, 2025
+                        .row.g-1.justify-content-between.mb-3.small
+                            .col-auto
+                                i.icon.me-1.icon-comments 
+                                | Comments: 512
+                            .col-auto
+                                i.icon.me-1.icon-shelves 
+                                | Shelves: 2
+                            .col-auto
+                                i.icon.me-1.icon-views 
+                                span.text-uppercase.text-secondary House Members, Fans and Internet - Widest Exposure
+                    .card-footer.p-0.border-0
+                        a.card-link(href="#") Chapters
+            .col-12.col-sm-6.col-lg-4.col-xl-3 
+                .card.border-0.h-100
+                    .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 320px")
+                        a.h6.text-center.card-title.text-uppercase.w-100(href="") The Crawley
+                        p.text-secondary.text-uppercase.text-center by jankarlsson
+                        div.position-relative.flex-fill
+                            img.card-img.position-absolute.w-auto.translate-middle.top-50.start-50(src="img/houses-img-2.jpg", alt="")
+                    .card-body.px-0
+                        p.text-secondary.text-uppercase Book / Other
+                        p.text-secondary April 21, 2025
+                        .row.g-1.justify-content-between.mb-3.small
+                            //- .col-auto
+                            //-     i.icon.me-1.icon-comments 
+                            //-     | Comments: 512
+                            //- .col-auto
+                            //-     i.icon.me-1.icon-shelves 
+                            //-     | Shelves: 2
+                            .col-auto
+                                i.icon.me-1.icon-views 
+                                span.text-uppercase.text-secondary House Members, Fans and Internet - Widest Exposure
+                    //- .card-footer.p-0.border-0
+                    //-     a.card-link(href="#") Chapters
+            .col-12.col-sm-6.col-lg-4.col-xl-3 
+                .card.border-0.h-100
+                    .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 320px")
+                        a.h6.text-center.card-title.text-uppercase.w-100(href="") Micah
+                        p.text-secondary.text-uppercase.text-center Chapter 1
+                        div.position-relative.flex-fill
+                            img.card-img.position-absolute.w-auto.translate-middle.top-50.start-50(src="img/houses-img-1.jpg", alt="")
+                    .card-body.px-0
+                        p.text-secondary.text-uppercase Book / Other
+                        p.text-secondary April 21, 2025
+                        .row.g-1.justify-content-between.mb-3.small
+                            .col-auto
+                                i.icon.me-1.icon-comments 
+                                | Comments: 512
+                            .col-auto
+                                i.icon.me-1.icon-shelves 
+                                | Shelves: 2
+                            .col-auto
+                                i.icon.me-1.icon-views 
+                                span.text-uppercase.text-secondary House Members, Fans and Internet - Widest Exposure
+                    .card-footer.p-0.border-0
+                        a.card-link(href="#") Chapters
+            .col-12.col-sm-6.col-lg-4.col-xl-3 
+                .card.border-0.h-100
+                    .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 320px")
+                        a.h6.text-center.card-title.text-uppercase.w-100(href="") The Crawley
+                        p.text-secondary.text-uppercase.text-center by jankarlsson
+                        div.position-relative.flex-fill
+                            img.card-img.position-absolute.w-auto.translate-middle.top-50.start-50(src="img/houses-img-2.jpg", alt="")
+                    .card-body.px-0
+                        p.text-secondary.text-uppercase Book / Other
+                        p.text-secondary April 21, 2025
+                        .row.g-1.justify-content-between.mb-3.small
+                            //- .col-auto
+                            //-     i.icon.me-1.icon-comments 
+                            //-     | Comments: 512
+                            //- .col-auto
+                            //-     i.icon.me-1.icon-shelves 
+                            //-     | Shelves: 2
+                            .col-auto
+                                i.icon.me-1.icon-views 
+                                span.text-uppercase.text-secondary House Members, Fans and Internet - Widest Exposure
+                    //- .card-footer.p-0.border-0
+                    //-     a.card-link(href="#") Chapters
+            .col-12.col-sm-6.col-lg-4.col-xl-3 
+                .card.border-0.h-100
+                    .bg-light.p-3.card-img.d-flex.flex-column.justify-content-between(style="height: 320px")
+                        a.h6.text-center.card-title.text-uppercase.w-100(href="") Micah
+                        p.text-secondary.text-uppercase.text-center Chapter 1
+                        div.position-relative.flex-fill
+                            img.card-img.position-absolute.w-auto.translate-middle.top-50.start-50(src="img/houses-img-1.jpg", alt="")
+                    .card-body.px-0
+                        p.text-secondary.text-uppercase Book / Other
+                        p.text-secondary April 21, 2025
+                        .row.g-1.justify-content-between.mb-3.small
+                            .col-auto
+                                i.icon.me-1.icon-comments 
+                                | Comments: 512
+                            .col-auto
+                                i.icon.me-1.icon-shelves 
+                                | Shelves: 2
+                            .col-auto
+                                i.icon.me-1.icon-views 
+                                span.text-uppercase.text-secondary House Members, Fans and Internet - Widest Exposure
+                    .card-footer.p-0.border-0
+                        a.card-link(href="#") Chapters
+        include ../pagination

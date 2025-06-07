@@ -1,0 +1,105 @@
+include ../../mixins/section
+include ../../mixins/section-title
+include ../../mixins/breadcrumbs
+
+section.mt-4.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("House")
+        h2.mb-5 The Review Chain Publishing House Members
+        .row.justify-content-between.mb-3 
+            .col-12.col-md-auto 
+                //- button.btn.btn-dark.w-100.mb-3.d-md-none.btn-md(type="button", data-bs-toggle="collapse", data-bs-target=".collapse-filter", aria-expanded="false", aria-controls="collapseExample")
+                //-     | Filter
+                //- .collapse.d-md-block.collapse-filter
+                ul.nav.nav-pills.mb-3.nav-fill
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-home.html")
+                            | Home
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-forum.html")
+                            | Forum
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-content.html")
+                            | Content
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100.active(href="review-chain-members.html")
+                            | Members
+            .col-12.col-md-auto
+                    form(method="GET")
+                        .input-group
+                            input.form-control(type="text", placeholder="Find a Publishing House", name="search")
+                            span.input-group-text
+                                svg.bi.bi-search(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="currentColor", viewBox="0 0 16 16")
+                                    path(d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0")
+        .row.gy-3 
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+            .col-6.col-md-4.col-lg-3 
+                .row.align-items-center.g-3.text-center.text-sm-start
+                    .col-12.col-sm-auto 
+                        img.rounded-circle(src="img/member-ava.jpg", alt="", style="width: 90px;")    
+                    .col-12.col-sm-auto 
+                        h6 MicahOrchid08
+                        div.text-secondary Country:
+        include ../pagination

@@ -1,0 +1,27 @@
+include ../../mixins/breadcrumbs
+
+
+section.mt-4.mb-6.mb-lg-9
+    .container
+        +breadcrumbs("Content")
+        h2.mb-5 The Review Chain Publishing House Members
+        p.text-secondary This is The Review Chain. The purpose of the house is for everyone to get constructive reviews for their writing and also find new and exciting things to read.  Everyone is welcome in the house. There's a whole heap of different features in the house, be sure to check them all out. There is often a contest going on so take a look if there is one or keep an eye out for the next one. Please read the Rules before posting.
+        .row 
+            .col-auto
+                ul.nav.nav-pills.nav-fill
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100.active(href="review-chain-home.html")
+                            | Home
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-forum.html")
+                            | Forum
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-content.html")
+                            | Content
+                    li.nav-item.m-1
+                        a.btn.btn-navigation.w-100(href="review-chain-members.html")
+                            | Members
+        include house-card
+        include house-messages
+        include house-members
+        include house-postings

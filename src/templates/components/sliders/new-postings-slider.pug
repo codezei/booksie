@@ -1,0 +1,16 @@
+include ../../mixins/cards/book-card
+include ../../mixins/slider-navigation
+
+.swiper.new-postings-swiper 
+    .swiper-wrapper 
+        .swiper-slide
+            +book-card("#", "img/ebooks-book-1.jpg", "Monarch", "by Cobber")
+        .swiper-slide
+            +book-card("#", "img/ebooks-book-2.jpg", "Where Dragons Rule: Dissent (Old Ver)", "by Sonny Dae")
+        .swiper-slide
+            +book-card("#", "img/ebooks-book-3.jpg", "Choose Your Seaside Adventure", "by toadstoolwoods")
+        .swiper-slide
+            +book-card("#", "img/ebooks-book-4.jpg", "The Divine Diamond Highway", "by Thomas LaHomme")
+        .swiper-slide
+            +book-card("#", "img/ebooks-book-4.jpg", "The Rockstar - Beginnings", "by RoyBoy")
++slider-navigation("new-postings")
